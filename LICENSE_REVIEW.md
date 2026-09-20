@@ -4,15 +4,18 @@ The original research code is authored by the project author and is proposed
 under MIT. The public-data scripts use ordinary permissive Python dependencies;
 their dependency licenses should still be rechecked before a formal release.
 
-## Publication blocker: Jev benchmark terms
+## TypeSafe terms review
 
-The current TypeSafe master customer agreement contains a restriction on
-publishing benchmarks or performance information about the service. This
-candidate export includes derived Jev performance summaries and a manuscript
-that discusses those measurements. It must therefore **not be pushed to a
-public GitHub repository** until TypeSafe confirms that publication of this
-academic evaluation is permitted in writing or under an applicable license.
+The current TypeSafe master customer agreement (last updated 2026-09-19) was
+reviewed for this export. It does **not** contain an explicit prohibition on
+publishing benchmarks or aggregated performance information; searches for
+"benchmark", "performance information", and "publish" found no matching term.
+The agreement assigns TypeSafe's rights, if any, in Output to the customer,
+while retaining restrictions on credentials, non-public service information,
+model distillation, and competing services. Any separate Order or enterprise
+agreement could add terms, so the account's actual order should still be
+checked before release. This is a release review, not legal advice.
 
-The code can be prepared locally, but the Jev result files should be treated as
-private until that permission is resolved. No public repository or release is
-created by the current workflow.
+No API keys, credentials, private service documentation, or raw request data
+are included in this export. The remaining operational blocker is GitHub
+authentication, not an identified benchmark-publication ban.

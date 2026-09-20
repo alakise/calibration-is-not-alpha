@@ -151,8 +151,8 @@ The offline command cannot launch paid inference by construction.
 See `CITATION.cff`, `paper/manuscript.md`, and `paper/references.bib`. Author
 metadata in `CITATION.cff` is marked for confirmation rather than guessed.
 The original research code is released under the MIT License; see `LICENSE`.
-Before public publication, review `LICENSE_REVIEW.md`: the current TypeSafe
-service agreement may restrict publication of Jev benchmark/performance data.
+Before public publication, review `LICENSE_REVIEW.md` and any account-specific
+TypeSafe order terms.
 
 ## Disclaimer
 

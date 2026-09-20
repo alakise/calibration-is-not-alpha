@@ -1,8 +1,8 @@
 # Calibration Is Not Alpha: A Transaction-Cost-Aware Evaluation of Jev in Short-Horizon Cryptocurrency Markets
 
 **Status:** working-paper draft. The numerical claims below are generated from
-the committed result summaries, but public redistribution of Jev benchmark or
-performance information requires confirmation of the service terms.
+the committed result summaries. TypeSafe terms and any account-specific Order
+should be checked before redistribution.
 
 ## Abstract
 
