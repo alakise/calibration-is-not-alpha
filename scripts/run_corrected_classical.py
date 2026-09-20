@@ -102,7 +102,7 @@ def mean_reversion_control(
     data: pd.DataFrame,
     move_threshold: float = 2.0,
 ) -> pd.Series:
-    """A small, preregistered extreme-move reversal control."""
+    """A small, pre-specified extreme-move reversal control."""
     normalized = data["r5"] / data["vol60"].replace(0.0, np.nan)
     reversal = data["r1"]
     return pd.Series(

@@ -35,16 +35,54 @@ demonstrated in a pinned, BTC-focused, short-horizon experiment.
 
 ## 2. Related work
 
+### Calibration and probabilistic economic forecasts
+
 Calibration is a distinct property from classification accuracy and must be
-measured separately [@guo2017]. Machine-learning asset-pricing work emphasizes
-chronological out-of-sample evaluation and economic, rather than purely
-statistical, objectives [@gu2020]. High-frequency order-book research shows that
-order-flow history can contain predictive information in some settings
-[@sirignano2019]. Bitcoin studies also report short-horizon statistical
-predictability while finding that transaction costs can erase the resulting
-strategy returns [@jaquart2021]. Our contribution is a negative, cost-aware
-evaluation of a typed probabilistic System-One judgment against deterministic
-baselines in this specific setting.
+measured separately [@guo2017]. Earlier work on probabilistic economic
+forecasts likewise treats reliability as a property of the forecast
+distribution, not a substitute for a useful decision rule [@galbraith2009].
+We therefore report Brier score, log loss, reliability bins, and expected
+calibration error before discussing returns.
+
+### Machine learning, crypto efficiency, and market microstructure
+
+Machine-learning asset-pricing work emphasizes chronological out-of-sample
+evaluation and economic, rather than purely statistical, objectives [@gu2020].
+The Bitcoin efficiency literature is mixed: early evidence finds departures
+from weak-form efficiency that vary across subsamples [@urquhart2016], while
+power-transformed-return tests obtain different conclusions [@nadarajah2017].
+Cross-exchange price formation and arbitrage further show that market
+segmentation, capital mobility, and execution frictions matter for interpreting
+short-horizon predictability [@makarov2020]. At the order-book level, order-flow
+history can contain predictive information in some settings [@sirignano2019],
+but that does not imply a portable or cost-surviving signal in every venue.
+Bitcoin forecasting studies likewise report statistical predictability while
+showing that implementation details and costs affect the economic conclusion
+[@jaquart2021].
+
+### LLM and agentic trading systems
+
+Recent LLM-trading work commonly uses language models as direct traders,
+research teams, or alpha-mining components. A survey by Ding et al. organizes
+these systems by architecture, input modality, and backtest protocol and notes
+that short evaluation windows and inconsistent cost treatment limit comparison
+across studies [@ding2024]. TradingAgents is a representative multi-agent
+framework in which specialized analyst and risk roles debate before a trading
+decision [@xiao2024]. Jev differs from these free-form or action-generating
+systems: this experiment uses a pinned typed probability distribution, and the
+downstream policy—not the model—decides whether a signal is economically strong
+enough to trade.
+
+### Transaction costs and economic evaluation
+
+Transaction costs are not a cosmetic adjustment in high-turnover research.
+Realized costs and price impact can materially constrain otherwise attractive
+anomalies [@frazzini2012]. More recent work shows that omitting fees and
+liquidity costs can inflate false discoveries when many trading rules are
+tested [@anghel2022]. Our fixed 15-basis-point round-trip hurdle is therefore
+reported alongside gross returns, net returns, turnover, and coverage. Our
+contribution is a negative, cost-aware evaluation of a typed probabilistic
+System-One judgment against deterministic baselines in this specific setting.
 
 ## 3. Jev / System-One decision model
 
@@ -95,7 +133,7 @@ The probability vectors and exact raw-signal metrics are preserved in
 
 No tested directional configuration survived the official cost model. This is
 not a claim that every threshold or market is unprofitable; it is the result of
-the preregistered configurations and windows actually evaluated.
+the pre-specified configurations and frozen windows actually evaluated.
 
 ## 7. Movement / opportunity experiment
 
@@ -105,6 +143,11 @@ chronological validation slice has Brier 0.1662127 and log loss 0.5118111.
 Adding Jev changes these to 0.1661986 and 0.5117764, respectively. The
 improvements are measurable but economically and scientifically small relative
 to the deterministic baseline.
+
+The main calibration table includes the unconditional base-rate predictor. For
+`MOVE_15M_15BPS`, its holdout Brier score is 0.2112499994 and log loss is
+0.6135095471; Jev's 0.2131386905 and 0.6186983130 therefore do not beat the
+constant event-rate baseline on these metrics.
 
 The TERNARY V1 `P(FLAT)` output is negatively correlated with future movement
 magnitude (5-minute Spearman approximately -0.112). Low `P(FLAT)` observations
@@ -142,7 +185,12 @@ signal.
 ## 11. Results
 
 The publication tables and figures are generated under `paper/tables/` and
-`paper/figures/`. The maker simulation is intentionally labelled diagnostic:
+`paper/figures/`. The `movement_brier_comparison.svg` figure places the constant
+base rate, Jev, deterministic volatility, and deterministic-volatility plus Jev
+on one scale. Its caption makes the split difference explicit: the first two
+rows are holdout-overall scores, while the deterministic rows are the untouched
+chronological validation slice. The maker simulation is intentionally labelled
+diagnostic:
 optimistic Q0 is +$20.13, conservative queue-aware Q0 is +$2.09, maker fees are
 zero by assumption, and Q4 leaves only three fills. No alpha claim follows.
 

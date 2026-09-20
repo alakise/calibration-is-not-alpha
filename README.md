@@ -28,7 +28,7 @@ The central scientific distinction is:
 - Adding Jev probability to deterministic volatility improved Brier by only
   `1.4058e-05` and log loss by `3.4719e-05`.
 - Corrected classical breakout/volatility baselines also failed to survive the
-  preregistered 15 bps round-trip cost model out of sample.
+  pre-specified 15 bps round-trip cost model out of sample.
 - The study's conclusion is **NO CURRENT ALPHA CANDIDATE** under the tested
   conditions.
 
@@ -151,8 +151,8 @@ The offline command cannot launch paid inference by construction.
 See `CITATION.cff`, `paper/manuscript.md`, and `paper/references.bib`. Author
 metadata in `CITATION.cff` is marked for confirmation rather than guessed.
 The original research code is released under the MIT License; see `LICENSE`.
-Before public publication, review `LICENSE_REVIEW.md` and any account-specific
-TypeSafe order terms.
+The repository is already public; account-specific TypeSafe order terms should
+still be reviewed before formal academic submission.
 
 ## Disclaimer
 

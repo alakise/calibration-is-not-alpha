@@ -92,6 +92,58 @@ def _svg_chart(
     path.write_text(svg, encoding="utf-8")
 
 
+def _svg_bars(
+    path: Path,
+    title: str,
+    labels: list[str],
+    values: list[float],
+    y_label: str,
+    color: str = "#245b8a",
+) -> None:
+    width, height = 900, 520
+    left, bottom, top, right = 90, 95, 55, 35
+    high = max(values, default=1.0) * 1.18 or 1.0
+    chart_width = width - left - right
+    chart_height = height - top - bottom
+    slot = chart_width / max(1, len(values))
+
+    def y(value: float) -> float:
+        return top + chart_height * (high - value) / high
+
+    bars = []
+    label_nodes = []
+    value_nodes = []
+    for index, (label, value) in enumerate(zip(labels, values, strict=True)):
+        x = left + index * slot + slot * 0.16
+        bar_width = slot * 0.68
+        bar_y = y(value)
+        bars.append(
+            f'<rect x="{x:.1f}" y="{bar_y:.1f}" width="{bar_width:.1f}" '
+            f'height="{height - bottom - bar_y:.1f}" fill="{color}"/>'
+        )
+        center = x + bar_width / 2
+        label_nodes.append(
+            f'<text x="{center:.1f}" y="{height - 55}" text-anchor="middle" '
+            f'font-family="sans-serif" font-size="12">{label}</text>'
+        )
+        value_nodes.append(
+            f'<text x="{center:.1f}" y="{max(top + 14, bar_y - 8):.1f}" '
+            f'text-anchor="middle" font-family="sans-serif" font-size="12">{value:.4f}</text>'
+        )
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+<rect width="100%" height="100%" fill="white"/>
+<text x="{width / 2:.0f}" y="30" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold">{title}</text>
+<line x1="{left}" y1="{top}" x2="{left}" y2="{height - bottom}" stroke="#333"/>
+<line x1="{left}" y1="{height - bottom}" x2="{width - right}" y2="{height - bottom}" stroke="#333"/>
+<text x="20" y="{height / 2:.0f}" transform="rotate(-90 20 {height / 2:.0f})" text-anchor="middle" font-family="sans-serif" font-size="13">{y_label}</text>
+{"".join(bars)}
+{"".join(value_nodes)}
+{"".join(label_nodes)}
+</svg>'''
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(svg, encoding="utf-8")
+
+
 def build_offline() -> dict[str, object]:
     opportunity = load_json(RESULTS / "summaries" / "jev_opportunity_analysis.json")
     baseline = load_json(RESULTS / "summaries" / "baseline_research_summary.json")
@@ -324,6 +376,14 @@ def build_offline() -> dict[str, object]:
         [item["mean_prediction"] for item in rel],
         "mean predicted probability",
         "#245b8a",
+    )
+    _svg_bars(
+        PAPER / "figures" / "movement_brier_comparison.svg",
+        "MOVE_15M_15BPS Brier by reported split",
+        ["base rate", "Jev", "det. vol", "det. vol + Jev"],
+        [float(row["brier"]) for row in calibration_rows],
+        "Brier score (lower is better)",
+        "#4f6d7a",
     )
     _svg_chart(
         PAPER / "figures" / "classical_net_pnl.svg",

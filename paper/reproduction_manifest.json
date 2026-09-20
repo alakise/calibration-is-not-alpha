@@ -27,6 +27,7 @@
   "figures": [
     "paper/figures/classical_net_pnl.svg",
     "paper/figures/move_15m_reliability.svg",
+    "paper/figures/movement_brier_comparison.svg",
     "paper/figures/pflat_vs_5m_abs_movement.svg"
   ]
 }
