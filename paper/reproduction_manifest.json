@@ -9,8 +9,14 @@
     "results/summaries/quant_microstructure_summary.json"
   ],
   "tables": [
+    "paper/tables/classical_strategy_results.csv",
+    "paper/tables/classical_strategy_results.md",
+    "paper/tables/dataset_overview.csv",
+    "paper/tables/dataset_overview.md",
     "paper/tables/directional_results.csv",
     "paper/tables/directional_results.md",
+    "paper/tables/incremental_predictive_value.csv",
+    "paper/tables/incremental_predictive_value.md",
     "paper/tables/microstructure_exploratory.csv",
     "paper/tables/microstructure_exploratory.md",
     "paper/tables/movement_calibration.csv",

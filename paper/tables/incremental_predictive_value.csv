@@ -1,0 +1,2 @@
+comparison,validation_n,baseline_brier,combined_brier,brier_improvement,baseline_log_loss,combined_log_loss,log_loss_improvement,split
+deterministic volatility -> deterministic volatility + Jev,12096,0.1662127032640164,0.16619864560090328,1.4057663113131724e-05,0.511811068763083,0.511776350258877,3.471850420599942e-05,fixed chronological 70/30 selection/validation

@@ -99,6 +99,55 @@ def build_offline() -> dict[str, object]:
     phase = load_json(RESULTS / "summaries" / "quant_microstructure_summary.json")
 
     raw = baseline["raw_signal"]
+    dataset_rows = [
+        {
+            "experiment": "Jev directional baseline",
+            "period": "7-day development window",
+            "states": 40320,
+            "contract": "TERNARY_V1 + BINARY_V1",
+            "model": "jev-1.13.0",
+            "input_representation": "V1 raw candles; V2 candles + technicals",
+            "jev_calls": 40320,
+            "input_tokens": "not republished in directional manifest",
+        },
+        {
+            "experiment": "Jev opportunity holdout",
+            "period": "2026-08-15 through 2026-09-11 UTC",
+            "states": 40320,
+            "contract": "market-opportunity-v1",
+            "model": "jev-1.13.0",
+            "input_representation": "market-state-v2 + seven Noul questions",
+            "jev_calls": 40320,
+            "input_tokens": 194848794,
+        },
+        {
+            "experiment": "Corrected classical baseline",
+            "period": "historical BTC 1-minute sample",
+            "states": 86357,
+            "contract": "deterministic labels",
+            "model": "local deterministic",
+            "input_representation": "OHLCV and derived volatility/volume features",
+            "jev_calls": 0,
+            "input_tokens": 0,
+        },
+        {
+            "experiment": "Microstructure exploration",
+            "period": "fixed live public-Kraken snapshot",
+            "states": 81071,
+            "contract": "exploratory",
+            "model": "local deterministic",
+            "input_representation": "L5 depth and trade-flow proxies",
+            "jev_calls": 0,
+            "input_tokens": 0,
+        },
+    ]
+    write_csv(PAPER / "tables" / "dataset_overview.csv", dataset_rows)
+    write_markdown(
+        PAPER / "tables" / "dataset_overview.md",
+        list(dataset_rows[0]),
+        [list(row.values()) for row in dataset_rows],
+    )
+
     directional_rows = []
     for key, item in sorted(raw.items()):
         five = item.get("horizons", {}).get("5m", {})
@@ -183,6 +232,26 @@ def build_offline() -> dict[str, object]:
         [list(row.values()) for row in calibration_rows],
     )
 
+    incremental_rows = [
+        {
+            "comparison": "deterministic volatility -> deterministic volatility + Jev",
+            "validation_n": inc["baseline_plus_jev_validation"]["n"],
+            "baseline_brier": inc["baseline_validation"]["brier"],
+            "combined_brier": inc["baseline_plus_jev_validation"]["brier"],
+            "brier_improvement": inc["incremental_brier_improvement"],
+            "baseline_log_loss": inc["baseline_validation"]["log_loss"],
+            "combined_log_loss": inc["baseline_plus_jev_validation"]["log_loss"],
+            "log_loss_improvement": inc["incremental_log_loss_improvement"],
+            "split": "fixed chronological 70/30 selection/validation",
+        }
+    ]
+    write_csv(PAPER / "tables" / "incremental_predictive_value.csv", incremental_rows)
+    write_markdown(
+        PAPER / "tables" / "incremental_predictive_value.md",
+        list(incremental_rows[0]),
+        [list(row.values()) for row in incremental_rows],
+    )
+
     classical = phase["corrected_classical"]["canonical_hold_15m"]
     cost_rows = []
     for strategy, item in classical.items():
@@ -195,6 +264,28 @@ def build_offline() -> dict[str, object]:
         PAPER / "tables" / "transaction_cost_sensitivity.md",
         list(cost_rows[0]),
         [list(row.values()) for row in cost_rows],
+    )
+
+    classical_rows = []
+    for strategy, item in classical.items():
+        classical_rows.append(
+            {
+                "strategy": strategy,
+                "candidate_signals": item.get("candidate_signals"),
+                "executed_trades": item.get("executed_trades"),
+                "gross_pnl_usd": item.get("gross_pnl"),
+                "net_pnl_usd": item.get("net_pnl"),
+                "gross_bps_per_trade": item.get("gross_return_per_trade_bps"),
+                "net_bps_per_trade": item.get("net_return_per_trade_bps"),
+                "win_rate": item.get("win_rate"),
+                "max_drawdown_usd": item.get("max_drawdown"),
+            }
+        )
+    write_csv(PAPER / "tables" / "classical_strategy_results.csv", classical_rows)
+    write_markdown(
+        PAPER / "tables" / "classical_strategy_results.md",
+        list(classical_rows[0]),
+        [list(row.values()) for row in classical_rows],
     )
 
     micro = phase["microstructure"]["signal_analysis"].get("feature_diagnostics", {})
