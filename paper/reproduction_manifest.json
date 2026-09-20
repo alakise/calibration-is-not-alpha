@@ -1,0 +1,26 @@
+{
+  "offline": true,
+  "paid_inference": false,
+  "network": false,
+  "source_artifacts": [
+    "results/summaries/baseline_research_summary.json",
+    "results/summaries/second_pass_summary.json",
+    "results/summaries/jev_opportunity_analysis.json",
+    "results/summaries/quant_microstructure_summary.json"
+  ],
+  "tables": [
+    "paper/tables/directional_results.csv",
+    "paper/tables/directional_results.md",
+    "paper/tables/microstructure_exploratory.csv",
+    "paper/tables/microstructure_exploratory.md",
+    "paper/tables/movement_calibration.csv",
+    "paper/tables/movement_calibration.md",
+    "paper/tables/transaction_cost_sensitivity.csv",
+    "paper/tables/transaction_cost_sensitivity.md"
+  ],
+  "figures": [
+    "paper/figures/classical_net_pnl.svg",
+    "paper/figures/move_15m_reliability.svg",
+    "paper/figures/pflat_vs_5m_abs_movement.svg"
+  ]
+}

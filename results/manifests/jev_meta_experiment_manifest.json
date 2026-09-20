@@ -1,0 +1,50 @@
+{
+  "manifest_version": 1,
+  "status": "DESIGN_ONLY_NO_PAID_CALLS",
+  "created_at": "2026-09-20T11:14:15.592070+00:00",
+  "data_cutoff": "2026-09-20T10:52:21+00:00",
+  "state_version": "market-state-v3-compact-proposed",
+  "target_tokens": "500-800 where practical",
+  "candidate_fields": [
+    "symbol",
+    "candidate_type",
+    "breakout_strength",
+    "momentum_normalized",
+    "volatility_regime",
+    "efficiency_ratio",
+    "volume_confirmation",
+    "ofi_10s",
+    "ofi_30s",
+    "ofi_60s",
+    "trade_flow_imbalance",
+    "book_imbalance_L1",
+    "book_imbalance_L5",
+    "microprice_displacement",
+    "spread_bps",
+    "depth",
+    "liquidity_state"
+  ],
+  "questions": {
+    "regime": [
+      "TRENDING",
+      "MEAN_REVERTING",
+      "DISORDERED"
+    ],
+    "signal_consistency": "native Noul",
+    "liquidity_stressed": "native Noul",
+    "toxic_bid": "native Noul",
+    "toxic_ask": "native Noul",
+    "quote_environment": [
+      "BID_FAVORED",
+      "ASK_FAVORED",
+      "BOTH_ACCEPTABLE",
+      "ABSTAIN"
+    ]
+  },
+  "labels": [
+    "future mid return 1s/5s/10s/30s/60s",
+    "adverse selection after hypothetical passive bid/ask fill"
+  ],
+  "budget_usd": 0.0,
+  "no_inference_launched": true
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="450" y="30" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold">Corrected classical net PnL at 15 bps</text>
+<line x1="90" y1="55" x2="90" y2="440" stroke="#333"/>
+<line x1="90" y1="440" x2="865" y2="440" stroke="#333"/>
+<text x="20" y="260" transform="rotate(-90 20 260)" text-anchor="middle" font-family="sans-serif" font-size="13">net PnL (USD)</text>
+<polyline points="90.0,413.4 245.0,140.5 400.0,103.5 555.0,84.5 710.0,81.6 865.0,237.6" fill="none" stroke="#9b2c2c" stroke-width="3"/>
+<circle cx="90.0" cy="413.4" r="4" fill="#9b2c2c"/><circle cx="245.0" cy="140.5" r="4" fill="#9b2c2c"/><circle cx="400.0" cy="103.5" r="4" fill="#9b2c2c"/><circle cx="555.0" cy="84.5" r="4" fill="#9b2c2c"/><circle cx="710.0" cy="81.6" r="4" fill="#9b2c2c"/><circle cx="865.0" cy="237.6" r="4" fill="#9b2c2c"/>
+<text x="90.0" y="475" text-anchor="middle" font-size="12">S0_BREAKOUT</text><text x="245.0" y="475" text-anchor="middle" font-size="12">S1_BREAKOUT_VOL</text><text x="400.0" y="475" text-anchor="middle" font-size="12">S2_BREAKOUT_VOL_ER</text><text x="555.0" y="475" text-anchor="middle" font-size="12">S3_BREAKOUT_VOL_ER_VOLUME</text><text x="710.0" y="475" text-anchor="middle" font-size="12">S4_BREAKOUT_VOL_ER_VOLUME_ETH</text><text x="865.0" y="475" text-anchor="middle" font-size="12">MR0_MEAN_REVERSION</text>
+<text x="90" y="468" font-family="sans-serif" font-size="11">lower probability / bucket</text>
+</svg>

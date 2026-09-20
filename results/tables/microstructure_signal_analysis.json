@@ -1,0 +1,240 @@
+{
+  "symbol": "PF_XBTUSD",
+  "split": {
+    "selection_fraction": 0.7,
+    "selection_n": 28506,
+    "validation_n": 12218
+  },
+  "hurdle_semantics": "mid-price diagnostic; 15 bps round-trip is not subtracted from every 30s label",
+  "feature_diagnostics": {
+    "ofi_proxy_10s": {
+      "full_sample_n": 38068,
+      "rank_corr_30s": 0.0004641130027349933,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 38068,
+          "mean_feature": 2.600609435746559e-06,
+          "mean_future_30s_bps": -0.0275143367989093
+        }
+      ]
+    },
+    "trade_flow_imbalance_10s": {
+      "full_sample_n": 31942,
+      "rank_corr_30s": -0.021423140861757558,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 12778,
+          "mean_feature": -0.971867891581373,
+          "mean_future_30s_bps": -0.0017506991631810404
+        },
+        {
+          "bin": 1,
+          "n": 6390,
+          "mean_feature": -0.09794943921834372,
+          "mean_future_30s_bps": -0.07842058920449377
+        },
+        {
+          "bin": 2,
+          "n": 12774,
+          "mean_feature": 0.9285163509653731,
+          "mean_future_30s_bps": -0.02522297344184033
+        }
+      ]
+    },
+    "l5_imbalance": {
+      "full_sample_n": 38071,
+      "rank_corr_30s": -0.01005039914520612,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 7672,
+          "mean_feature": -0.29707799876549507,
+          "mean_future_30s_bps": -0.1056829943829384
+        },
+        {
+          "bin": 1,
+          "n": 27264,
+          "mean_feature": -0.2917001123775886,
+          "mean_future_30s_bps": 0.0
+        },
+        {
+          "bin": 2,
+          "n": 3135,
+          "mean_feature": 0.5176117850431099,
+          "mean_future_30s_bps": -0.07547554716267163
+        }
+      ]
+    },
+    "microprice_displacement_bps": {
+      "full_sample_n": 38071,
+      "rank_corr_30s": -0.01005039914520612,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 7672,
+          "mean_feature": -0.018275290830926594,
+          "mean_future_30s_bps": -0.1056829943829384
+        },
+        {
+          "bin": 1,
+          "n": 27264,
+          "mean_feature": -0.0179936286659465,
+          "mean_future_30s_bps": 0.0
+        },
+        {
+          "bin": 2,
+          "n": 3135,
+          "mean_feature": 0.032199342805912114,
+          "mean_future_30s_bps": -0.07547554716267163
+        }
+      ]
+    },
+    "spread_bps": {
+      "full_sample_n": 38071,
+      "rank_corr_30s": 0.05316607220528304,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 8157,
+          "mean_feature": 0.12302671310840589,
+          "mean_future_30s_bps": -0.12840698458512678
+        },
+        {
+          "bin": 1,
+          "n": 27264,
+          "mean_feature": 0.12337073522789653,
+          "mean_future_30s_bps": 0.0
+        },
+        {
+          "bin": 2,
+          "n": 2650,
+          "mean_feature": 0.12449418673044738,
+          "mean_future_30s_bps": 0.0
+        }
+      ]
+    }
+  },
+  "nested_models": [
+    {
+      "model": "M0",
+      "features": [
+        "m0_score",
+        "vol60"
+      ],
+      "train_n": 28273,
+      "test_n": 9798,
+      "oos_target_std_bps": 0.0,
+      "oos_informative_target": false,
+      "oos_mae_bps": 0.03704650278572769,
+      "oos_rmse_bps": 0.0370465027857277,
+      "oos_direction_hit_rate": 0.0,
+      "oos_rank_corr": null,
+      "mean_predicted_bps": -0.03704650278572769,
+      "mean_realized_bps": 0.0
+    },
+    {
+      "model": "M1",
+      "features": [
+        "m0_score",
+        "vol60",
+        "ofi_proxy_10s"
+      ],
+      "train_n": 28272,
+      "test_n": 9796,
+      "oos_target_std_bps": 0.0,
+      "oos_informative_target": false,
+      "oos_mae_bps": 0.03706092138409445,
+      "oos_rmse_bps": 0.03706092138409446,
+      "oos_direction_hit_rate": 0.0,
+      "oos_rank_corr": null,
+      "mean_predicted_bps": -0.03706092138409445,
+      "mean_realized_bps": 0.0
+    },
+    {
+      "model": "M2",
+      "features": [
+        "m0_score",
+        "vol60",
+        "ofi_proxy_10s",
+        "trade_flow_imbalance_10s"
+      ],
+      "train_n": 23797,
+      "test_n": 8142,
+      "oos_target_std_bps": 0.0,
+      "oos_informative_target": false,
+      "oos_mae_bps": 0.03427078241868143,
+      "oos_rmse_bps": 0.03482602528993529,
+      "oos_direction_hit_rate": 0.0,
+      "oos_rank_corr": null,
+      "mean_predicted_bps": -0.03427078241868143,
+      "mean_realized_bps": 0.0
+    },
+    {
+      "model": "M3",
+      "features": [
+        "m0_score",
+        "vol60",
+        "ofi_proxy_10s",
+        "trade_flow_imbalance_10s",
+        "l5_imbalance"
+      ],
+      "train_n": 23797,
+      "test_n": 8142,
+      "oos_target_std_bps": 0.0,
+      "oos_informative_target": false,
+      "oos_mae_bps": 0.3124966802623177,
+      "oos_rmse_bps": 0.5375716258205585,
+      "oos_direction_hit_rate": 0.0,
+      "oos_rank_corr": null,
+      "mean_predicted_bps": -0.3124966802623177,
+      "mean_realized_bps": 0.0
+    },
+    {
+      "model": "M4",
+      "features": [
+        "m0_score",
+        "vol60",
+        "ofi_proxy_10s",
+        "trade_flow_imbalance_10s",
+        "l5_imbalance",
+        "microprice_displacement_bps"
+      ],
+      "train_n": 23797,
+      "test_n": 8142,
+      "oos_target_std_bps": 0.0,
+      "oos_informative_target": false,
+      "oos_mae_bps": 0.39785601703707685,
+      "oos_rmse_bps": 0.7060428082320989,
+      "oos_direction_hit_rate": 0.0,
+      "oos_rank_corr": null,
+      "mean_predicted_bps": -0.39785601703707685,
+      "mean_realized_bps": 0.0
+    },
+    {
+      "model": "M5",
+      "features": [
+        "m0_score",
+        "vol60",
+        "ofi_proxy_10s",
+        "trade_flow_imbalance_10s",
+        "l5_imbalance",
+        "microprice_displacement_bps",
+        "spread_bps",
+        "bid_depth_l5",
+        "ask_depth_l5"
+      ],
+      "train_n": 23797,
+      "test_n": 8142,
+      "oos_target_std_bps": 0.0,
+      "oos_informative_target": false,
+      "oos_mae_bps": 1.8171957827707872,
+      "oos_rmse_bps": 3.3300493692193696,
+      "oos_direction_hit_rate": 0.0,
+      "oos_rank_corr": null,
+      "mean_predicted_bps": -1.8099601195964468,
+      "mean_realized_bps": 0.0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this research artifact, please cite the companion paper."
+title: "Calibration Is Not Alpha"
+abstract: >-
+  A transaction-cost-aware evaluation of Jev/System-One decision models and
+  deterministic baselines for short-horizon cryptocurrency markets.
+type: software
+version: "0.1.0"
+date-released: "2026-09-20"
+authors:
+  - family-names: "Doğan"
+    given-names: "Mustafa Safa"
+    # ORCID intentionally left unresolved pending author confirmation.
+repository-code: "https://github.com/alakise/calibration-is-not-alpha"
+license: MIT
+keywords:
+  - cryptocurrency
+  - forecasting
+  - calibration
+  - quantitative finance
+  - reproducible research
+  - transaction costs

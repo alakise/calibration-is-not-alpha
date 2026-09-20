@@ -1,0 +1,592 @@
+{
+  "generated_at": "2026-09-20T11:14:15.593266+00:00",
+  "cutoff": "2026-09-20T10:52:21+00:00",
+  "raw_audit": {
+    "cutoff": "2026-09-20T10:52:21+00:00",
+    "files": [
+      "outputs/overnight_research/microstructure/raw/2026-09-19/PF_ETHUSD.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-19/PF_XBTUSD.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-19/unknown.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-20/PF_ETHUSD.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-20/PF_XBTUSD.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-20/unknown.jsonl"
+    ],
+    "raw_lines": 26398119,
+    "bad_json": 0,
+    "symbols": {
+      "PF_ETHUSD": 9774195,
+      "PF_XBTUSD": 16623917,
+      "unknown": 7
+    },
+    "feed_counts": {
+      "book": 26301831,
+      "book_snapshot": 12,
+      "trade": 96257,
+      "trade_snapshot": 12,
+      "info": 7
+    },
+    "trade_side_counts": {
+      "None": 12,
+      "buy": 43463,
+      "sell": 53982
+    },
+    "first_event": "2026-09-19T23:36:50+00:00",
+    "last_event": "2026-09-20T10:52:21+00:00",
+    "reconnect_events": 4,
+    "side_semantics": "Kraken trade side is preserved as taker-side metadata; no aggressor side is inferred locally."
+  },
+  "derived_audit": {
+    "cutoff": "2026-09-20T10:52:21+00:00",
+    "source": "cached canonical state files from the same bounded snapshot",
+    "symbols": {
+      "PF_XBTUSD": 40724,
+      "PF_ETHUSD": 40347
+    },
+    "valid_book_rows": {
+      "PF_XBTUSD": 38190,
+      "PF_ETHUSD": 37679
+    },
+    "derived_counts": {
+      "book": 26301831,
+      "book_snapshot": 12,
+      "trade": 96257,
+      "trade_snapshot": 12,
+      "info": 7
+    },
+    "invalid_book_event_seconds": {},
+    "l1_l10_depth": "unavailable: collector persisted L5 depth only",
+    "ofi_semantics": "depth-change OFI proxy only; true price-level OFI is not claimed from this feed snapshot."
+  },
+  "canonical_state_files": {
+    "PF_XBTUSD": "outputs/quant_microstructure_phase/microstructure_state_PF_XBTUSD.csv.gz",
+    "PF_ETHUSD": "outputs/quant_microstructure_phase/microstructure_state_PF_ETHUSD.csv.gz"
+  },
+  "signal_analysis": {
+    "symbol": "PF_XBTUSD",
+    "split": {
+      "selection_fraction": 0.7,
+      "selection_n": 28506,
+      "validation_n": 12218
+    },
+    "hurdle_semantics": "mid-price diagnostic; 15 bps round-trip is not subtracted from every 30s label",
+    "feature_diagnostics": {
+      "ofi_proxy_10s": {
+        "full_sample_n": 38068,
+        "rank_corr_30s": 0.0004641130027349933,
+        "bins": [
+          {
+            "bin": 0,
+            "n": 38068,
+            "mean_feature": 2.600609435746559e-06,
+            "mean_future_30s_bps": -0.0275143367989093
+          }
+        ]
+      },
+      "trade_flow_imbalance_10s": {
+        "full_sample_n": 31942,
+        "rank_corr_30s": -0.021423140861757558,
+        "bins": [
+          {
+            "bin": 0,
+            "n": 12778,
+            "mean_feature": -0.971867891581373,
+            "mean_future_30s_bps": -0.0017506991631810404
+          },
+          {
+            "bin": 1,
+            "n": 6390,
+            "mean_feature": -0.09794943921834372,
+            "mean_future_30s_bps": -0.07842058920449377
+          },
+          {
+            "bin": 2,
+            "n": 12774,
+            "mean_feature": 0.9285163509653731,
+            "mean_future_30s_bps": -0.02522297344184033
+          }
+        ]
+      },
+      "l5_imbalance": {
+        "full_sample_n": 38071,
+        "rank_corr_30s": -0.01005039914520612,
+        "bins": [
+          {
+            "bin": 0,
+            "n": 7672,
+            "mean_feature": -0.29707799876549507,
+            "mean_future_30s_bps": -0.1056829943829384
+          },
+          {
+            "bin": 1,
+            "n": 27264,
+            "mean_feature": -0.2917001123775886,
+            "mean_future_30s_bps": 0.0
+          },
+          {
+            "bin": 2,
+            "n": 3135,
+            "mean_feature": 0.5176117850431099,
+            "mean_future_30s_bps": -0.07547554716267163
+          }
+        ]
+      },
+      "microprice_displacement_bps": {
+        "full_sample_n": 38071,
+        "rank_corr_30s": -0.01005039914520612,
+        "bins": [
+          {
+            "bin": 0,
+            "n": 7672,
+            "mean_feature": -0.018275290830926594,
+            "mean_future_30s_bps": -0.1056829943829384
+          },
+          {
+            "bin": 1,
+            "n": 27264,
+            "mean_feature": -0.0179936286659465,
+            "mean_future_30s_bps": 0.0
+          },
+          {
+            "bin": 2,
+            "n": 3135,
+            "mean_feature": 0.032199342805912114,
+            "mean_future_30s_bps": -0.07547554716267163
+          }
+        ]
+      },
+      "spread_bps": {
+        "full_sample_n": 38071,
+        "rank_corr_30s": 0.05316607220528304,
+        "bins": [
+          {
+            "bin": 0,
+            "n": 8157,
+            "mean_feature": 0.12302671310840589,
+            "mean_future_30s_bps": -0.12840698458512678
+          },
+          {
+            "bin": 1,
+            "n": 27264,
+            "mean_feature": 0.12337073522789653,
+            "mean_future_30s_bps": 0.0
+          },
+          {
+            "bin": 2,
+            "n": 2650,
+            "mean_feature": 0.12449418673044738,
+            "mean_future_30s_bps": 0.0
+          }
+        ]
+      }
+    },
+    "nested_models": [
+      {
+        "model": "M0",
+        "features": [
+          "m0_score",
+          "vol60"
+        ],
+        "train_n": 28273,
+        "test_n": 9798,
+        "oos_target_std_bps": 0.0,
+        "oos_informative_target": false,
+        "oos_mae_bps": 0.03704650278572769,
+        "oos_rmse_bps": 0.0370465027857277,
+        "oos_direction_hit_rate": 0.0,
+        "oos_rank_corr": null,
+        "mean_predicted_bps": -0.03704650278572769,
+        "mean_realized_bps": 0.0
+      },
+      {
+        "model": "M1",
+        "features": [
+          "m0_score",
+          "vol60",
+          "ofi_proxy_10s"
+        ],
+        "train_n": 28272,
+        "test_n": 9796,
+        "oos_target_std_bps": 0.0,
+        "oos_informative_target": false,
+        "oos_mae_bps": 0.03706092138409445,
+        "oos_rmse_bps": 0.03706092138409446,
+        "oos_direction_hit_rate": 0.0,
+        "oos_rank_corr": null,
+        "mean_predicted_bps": -0.03706092138409445,
+        "mean_realized_bps": 0.0
+      },
+      {
+        "model": "M2",
+        "features": [
+          "m0_score",
+          "vol60",
+          "ofi_proxy_10s",
+          "trade_flow_imbalance_10s"
+        ],
+        "train_n": 23797,
+        "test_n": 8142,
+        "oos_target_std_bps": 0.0,
+        "oos_informative_target": false,
+        "oos_mae_bps": 0.03427078241868143,
+        "oos_rmse_bps": 0.03482602528993529,
+        "oos_direction_hit_rate": 0.0,
+        "oos_rank_corr": null,
+        "mean_predicted_bps": -0.03427078241868143,
+        "mean_realized_bps": 0.0
+      },
+      {
+        "model": "M3",
+        "features": [
+          "m0_score",
+          "vol60",
+          "ofi_proxy_10s",
+          "trade_flow_imbalance_10s",
+          "l5_imbalance"
+        ],
+        "train_n": 23797,
+        "test_n": 8142,
+        "oos_target_std_bps": 0.0,
+        "oos_informative_target": false,
+        "oos_mae_bps": 0.3124966802623177,
+        "oos_rmse_bps": 0.5375716258205585,
+        "oos_direction_hit_rate": 0.0,
+        "oos_rank_corr": null,
+        "mean_predicted_bps": -0.3124966802623177,
+        "mean_realized_bps": 0.0
+      },
+      {
+        "model": "M4",
+        "features": [
+          "m0_score",
+          "vol60",
+          "ofi_proxy_10s",
+          "trade_flow_imbalance_10s",
+          "l5_imbalance",
+          "microprice_displacement_bps"
+        ],
+        "train_n": 23797,
+        "test_n": 8142,
+        "oos_target_std_bps": 0.0,
+        "oos_informative_target": false,
+        "oos_mae_bps": 0.39785601703707685,
+        "oos_rmse_bps": 0.7060428082320989,
+        "oos_direction_hit_rate": 0.0,
+        "oos_rank_corr": null,
+        "mean_predicted_bps": -0.39785601703707685,
+        "mean_realized_bps": 0.0
+      },
+      {
+        "model": "M5",
+        "features": [
+          "m0_score",
+          "vol60",
+          "ofi_proxy_10s",
+          "trade_flow_imbalance_10s",
+          "l5_imbalance",
+          "microprice_displacement_bps",
+          "spread_bps",
+          "bid_depth_l5",
+          "ask_depth_l5"
+        ],
+        "train_n": 23797,
+        "test_n": 8142,
+        "oos_target_std_bps": 0.0,
+        "oos_informative_target": false,
+        "oos_mae_bps": 1.8171957827707872,
+        "oos_rmse_bps": 3.3300493692193696,
+        "oos_direction_hit_rate": 0.0,
+        "oos_rank_corr": null,
+        "mean_predicted_bps": -1.8099601195964468,
+        "mean_realized_bps": 0.0
+      }
+    ]
+  },
+  "maker_simulation": {
+    "symbol": "PF_XBTUSD",
+    "official_cost_note": "maker fee/rebate set to 0 because account tier is not assumed; replace with signed fee schedule before economics are used",
+    "results": [
+      {
+        "fill_model": "optimistic_touch",
+        "toxicity_level": 0,
+        "states": 40724,
+        "fills": 7310,
+        "partial_fills": 3534,
+        "fill_rate_per_state": 0.17950103133287496,
+        "gross_spread_capture": 28.254489109987173,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": 20.128531995245794,
+        "max_inventory_usd": 2999.707142883509,
+        "max_drawdown": 5.330398011990837,
+        "adverse_selection_bps": {
+          "1s": -0.0037364563870080267,
+          "5s": -0.003737478953069058,
+          "10s": -0.0037400378185716383,
+          "30s": 0.001180589782890141,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 361.9349928834989,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "optimistic_touch",
+        "toxicity_level": 1,
+        "states": 40724,
+        "fills": 7310,
+        "partial_fills": 3534,
+        "fill_rate_per_state": 0.17950103133287496,
+        "gross_spread_capture": 28.254489109987173,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": 20.128531995245794,
+        "max_inventory_usd": 2999.707142883509,
+        "max_drawdown": 5.330398011990837,
+        "adverse_selection_bps": {
+          "1s": -0.0037364563870080267,
+          "5s": -0.003737478953069058,
+          "10s": -0.0037400378185716383,
+          "30s": 0.001180589782890141,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 361.9349928834989,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "optimistic_touch",
+        "toxicity_level": 2,
+        "states": 40724,
+        "fills": 4071,
+        "partial_fills": 1940,
+        "fill_rate_per_state": 0.09996562223750123,
+        "gross_spread_capture": 15.791418389598785,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": 4.421792046303381,
+        "max_inventory_usd": 2999.2329645198943,
+        "max_drawdown": 7.500170740573594,
+        "adverse_selection_bps": {
+          "1s": -0.006709284251787933,
+          "5s": -0.006712582007625627,
+          "10s": -0.006717534724306118,
+          "30s": -0.009263752173202898,
+          "60s": -0.018153074927555628
+        },
+        "inventory_final_usd": 832.2247736557325,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "optimistic_touch",
+        "toxicity_level": 3,
+        "states": 40724,
+        "fills": 15,
+        "partial_fills": 8,
+        "fill_rate_per_state": 0.0003683331696297024,
+        "gross_spread_capture": 0.05272810802715141,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": -0.08675338248758635,
+        "max_inventory_usd": 2531.458953550602,
+        "max_drawdown": 6.41293504112582,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.0,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 2525.0460185094757,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "optimistic_touch",
+        "toxicity_level": 4,
+        "states": 40724,
+        "fills": 3,
+        "partial_fills": 2,
+        "fill_rate_per_state": 7.366663392594048e-05,
+        "gross_spread_capture": 0.012995865983246369,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": -26.810471523438537,
+        "max_inventory_usd": 2114.57035,
+        "max_drawdown": 26.82346738942033,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.0,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 2087.746882610579,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "conservative_queue",
+        "toxicity_level": 0,
+        "states": 40724,
+        "fills": 624,
+        "partial_fills": 68,
+        "fill_rate_per_state": 0.01532265985659562,
+        "gross_spread_capture": 3.6029291891793767,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": 2.090854564165056,
+        "max_inventory_usd": 2976.2814247773063,
+        "max_drawdown": 3.6229191690435982,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.015192028273192656,
+          "60s": 0.01654668091457484
+        },
+        "inventory_final_usd": 574.0865878748162,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "conservative_queue",
+        "toxicity_level": 1,
+        "states": 40724,
+        "fills": 624,
+        "partial_fills": 68,
+        "fill_rate_per_state": 0.01532265985659562,
+        "gross_spread_capture": 3.6029291891793767,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": 2.090854564165056,
+        "max_inventory_usd": 2976.2814247773063,
+        "max_drawdown": 3.6229191690435982,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.015192028273192656,
+          "60s": 0.01654668091457484
+        },
+        "inventory_final_usd": 574.0865878748162,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "conservative_queue",
+        "toxicity_level": 2,
+        "states": 40724,
+        "fills": 347,
+        "partial_fills": 38,
+        "fill_rate_per_state": 0.008520773990767115,
+        "gross_spread_capture": 2.010568218047937,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": -9.15963126393035,
+        "max_inventory_usd": 2988.3044743961987,
+        "max_drawdown": 10.397781679101172,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.0,
+          "60s": 0.002479813476932785
+        },
+        "inventory_final_usd": 75.72778801793315,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "conservative_queue",
+        "toxicity_level": 3,
+        "states": 40724,
+        "fills": 7,
+        "partial_fills": 0,
+        "fill_rate_per_state": 0.00017188881249386112,
+        "gross_spread_capture": 0.04326959367929226,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": -1.8274157612668205,
+        "max_inventory_usd": 2998.129314645054,
+        "max_drawdown": 1.8929267228413664,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.0,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 2998.129314645054,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      {
+        "fill_model": "conservative_queue",
+        "toxicity_level": 4,
+        "states": 40724,
+        "fills": 3,
+        "partial_fills": 1,
+        "fill_rate_per_state": 7.366663392594048e-05,
+        "gross_spread_capture": 0.015208194333604609,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": -18.52645919508541,
+        "max_inventory_usd": 2443.1507951105796,
+        "max_drawdown": 18.541667389419672,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.0,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 2443.1507951105796,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      }
+    ]
+  },
+  "jev_manifest": {
+    "manifest_version": 1,
+    "status": "DESIGN_ONLY_NO_PAID_CALLS",
+    "created_at": "2026-09-20T11:14:15.592070+00:00",
+    "data_cutoff": "2026-09-20T10:52:21+00:00",
+    "state_version": "market-state-v3-compact-proposed",
+    "target_tokens": "500-800 where practical",
+    "candidate_fields": [
+      "symbol",
+      "candidate_type",
+      "breakout_strength",
+      "momentum_normalized",
+      "volatility_regime",
+      "efficiency_ratio",
+      "volume_confirmation",
+      "ofi_10s",
+      "ofi_30s",
+      "ofi_60s",
+      "trade_flow_imbalance",
+      "book_imbalance_L1",
+      "book_imbalance_L5",
+      "microprice_displacement",
+      "spread_bps",
+      "depth",
+      "liquidity_state"
+    ],
+    "questions": {
+      "regime": [
+        "TRENDING",
+        "MEAN_REVERTING",
+        "DISORDERED"
+      ],
+      "signal_consistency": "native Noul",
+      "liquidity_stressed": "native Noul",
+      "toxic_bid": "native Noul",
+      "toxic_ask": "native Noul",
+      "quote_environment": [
+        "BID_FAVORED",
+        "ASK_FAVORED",
+        "BOTH_ACCEPTABLE",
+        "ABSTAIN"
+      ]
+    },
+    "labels": [
+      "future mid return 1s/5s/10s/30s/60s",
+      "adverse selection after hypothetical passive bid/ask fill"
+    ],
+    "budget_usd": 0.0,
+    "no_inference_launched": true
+  },
+  "no_paid_jev_calls": true,
+  "no_real_orders": true
+}

@@ -1,0 +1,1317 @@
+{
+  "generated_at": "2026-09-20T11:14:20.389152+00:00",
+  "phase_cutoff": "2026-09-20T10:52:21+00:00",
+  "no_paid_jev_calls": true,
+  "no_real_orders": true,
+  "dataset": {
+    "classical": {
+      "symbol": "PF_XBTUSD",
+      "start": "2026-07-22T00:01:00+00:00",
+      "end": "2026-09-19T23:17:00+00:00",
+      "rows": 86357,
+      "eth_confirmation_used": true,
+      "lookahead": "features use current completed candle and past rolling windows; Donchian reference is shifted one candle"
+    },
+    "raw_audit": {
+      "cutoff": "2026-09-20T10:52:21+00:00",
+      "files": [
+        "outputs/overnight_research/microstructure/raw/2026-09-19/PF_ETHUSD.jsonl",
+        "outputs/overnight_research/microstructure/raw/2026-09-19/PF_XBTUSD.jsonl",
+        "outputs/overnight_research/microstructure/raw/2026-09-19/unknown.jsonl",
+        "outputs/overnight_research/microstructure/raw/2026-09-20/PF_ETHUSD.jsonl",
+        "outputs/overnight_research/microstructure/raw/2026-09-20/PF_XBTUSD.jsonl",
+        "outputs/overnight_research/microstructure/raw/2026-09-20/unknown.jsonl"
+      ],
+      "raw_lines": 26398119,
+      "bad_json": 0,
+      "symbols": {
+        "PF_ETHUSD": 9774195,
+        "PF_XBTUSD": 16623917,
+        "unknown": 7
+      },
+      "feed_counts": {
+        "book": 26301831,
+        "book_snapshot": 12,
+        "trade": 96257,
+        "trade_snapshot": 12,
+        "info": 7
+      },
+      "trade_side_counts": {
+        "None": 12,
+        "buy": 43463,
+        "sell": 53982
+      },
+      "first_event": "2026-09-19T23:36:50+00:00",
+      "last_event": "2026-09-20T10:52:21+00:00",
+      "reconnect_events": 4,
+      "side_semantics": "Kraken trade side is preserved as taker-side metadata; no aggressor side is inferred locally."
+    },
+    "derived_audit": {
+      "cutoff": "2026-09-20T10:52:21+00:00",
+      "source": "cached canonical state files from the same bounded snapshot",
+      "symbols": {
+        "PF_XBTUSD": 40724,
+        "PF_ETHUSD": 40347
+      },
+      "valid_book_rows": {
+        "PF_XBTUSD": 38190,
+        "PF_ETHUSD": 37679
+      },
+      "derived_counts": {
+        "book": 26301831,
+        "book_snapshot": 12,
+        "trade": 96257,
+        "trade_snapshot": 12,
+        "info": 7
+      },
+      "invalid_book_event_seconds": {},
+      "l1_l10_depth": "unavailable: collector persisted L5 depth only",
+      "ofi_semantics": "depth-change OFI proxy only; true price-level OFI is not claimed from this feed snapshot."
+    }
+  },
+  "corrected_classical": {
+    "official_cost_semantics": "5 bps fee + 2 bps slippage + 0.5 bps spread per side = 15 bps round-trip",
+    "previous_s1_invalid": true,
+    "candidate_counts": {
+      "S0_BREAKOUT": 18849,
+      "S1_BREAKOUT_VOL": 4898,
+      "S2_BREAKOUT_VOL_ER": 3386,
+      "S3_BREAKOUT_VOL_ER_VOLUME": 2213,
+      "S4_BREAKOUT_VOL_ER_VOLUME_ETH": 2124,
+      "MR0_MEAN_REVERSION": 6447
+    },
+    "canonical_hold_15m": {
+      "S0_BREAKOUT": {
+        "candidate_signals": 18849,
+        "executed_trades": 9002,
+        "gross_pnl": -138.73859912351548,
+        "net_pnl": -13641.738599123515,
+        "gross_return_per_trade_bps": -0.15411975019275218,
+        "net_return_per_trade_bps": -15.154119750192752,
+        "win_rate": 0.024772272828260385,
+        "profit_factor": 0.019477200155387835,
+        "max_drawdown": 13641.738599123535,
+        "cost_sensitivity_net_pnl": {
+          "5": -4639.738599123515,
+          "10": -9140.738599123515,
+          "15": -13641.738599123515,
+          "20": -18142.738599123517
+        }
+      },
+      "S1_BREAKOUT_VOL": {
+        "candidate_signals": 4898,
+        "executed_trades": 2733,
+        "gross_pnl": 4.8158726312187445,
+        "net_pnl": -4094.6841273687814,
+        "gross_return_per_trade_bps": 0.017621195138012236,
+        "net_return_per_trade_bps": -14.982378804861986,
+        "win_rate": 0.02561287961946579,
+        "profit_factor": 0.033552683001282974,
+        "max_drawdown": 4094.684127368781,
+        "cost_sensitivity_net_pnl": {
+          "5": -1361.6841273687812,
+          "10": -2728.1841273687814,
+          "15": -4094.6841273687814,
+          "20": -5461.184127368781
+        }
+      },
+      "S2_BREAKOUT_VOL_ER": {
+        "candidate_signals": 3386,
+        "executed_trades": 1877,
+        "gross_pnl": 12.79718242466086,
+        "net_pnl": -2802.702817575339,
+        "gross_return_per_trade_bps": 0.0681789154217414,
+        "net_return_per_trade_bps": -14.931821084578257,
+        "win_rate": 0.031965903036760786,
+        "profit_factor": 0.04444609325309685,
+        "max_drawdown": 2802.7028175753385,
+        "cost_sensitivity_net_pnl": {
+          "5": -925.7028175753392,
+          "10": -1864.2028175753392,
+          "15": -2802.702817575339,
+          "20": -3741.202817575339
+        }
+      },
+      "S3_BREAKOUT_VOL_ER_VOLUME": {
+        "candidate_signals": 2213,
+        "executed_trades": 1433,
+        "gross_pnl": 12.256664236972476,
+        "net_pnl": -2137.2433357630275,
+        "gross_return_per_trade_bps": 0.08553150200259928,
+        "net_return_per_trade_bps": -14.9144684979974,
+        "win_rate": 0.030704815073272853,
+        "profit_factor": 0.047481800175436475,
+        "max_drawdown": 2137.2433357630293,
+        "cost_sensitivity_net_pnl": {
+          "5": -704.2433357630275,
+          "10": -1420.7433357630275,
+          "15": -2137.2433357630275,
+          "20": -2853.7433357630275
+        }
+      },
+      "S4_BREAKOUT_VOL_ER_VOLUME_ETH": {
+        "candidate_signals": 2124,
+        "executed_trades": 1371,
+        "gross_pnl": 22.47158467375287,
+        "net_pnl": -2034.028415326247,
+        "gross_return_per_trade_bps": 0.16390652570206324,
+        "net_return_per_trade_bps": -14.836093474297938,
+        "win_rate": 0.03282275711159737,
+        "profit_factor": 0.050191208532138605,
+        "max_drawdown": 2034.028415326249,
+        "cost_sensitivity_net_pnl": {
+          "5": -663.0284153262471,
+          "10": -1348.528415326247,
+          "15": -2034.028415326247,
+          "20": -2719.5284153262473
+        }
+      },
+      "MR0_MEAN_REVERSION": {
+        "candidate_signals": 6447,
+        "executed_trades": 5004,
+        "gross_pnl": 14.146198301168031,
+        "net_pnl": -7491.853801698832,
+        "gross_return_per_trade_bps": 0.02826978077771389,
+        "net_return_per_trade_bps": -14.971730219222286,
+        "cost_sensitivity_net_pnl": {
+          "5": -2487.853801698832,
+          "10": -4989.853801698832,
+          "15": -7491.853801698832,
+          "20": -9993.853801698831
+        }
+      }
+    },
+    "walk_forward": [
+      {
+        "selection_start": "2026-08-15T00:00:00+00:00",
+        "selection_end": "2026-08-29T00:00:00+00:00",
+        "validation_end": "2026-09-05T00:00:00+00:00",
+        "selected_strategy": "S4_BREAKOUT_VOL_ER_VOLUME_ETH",
+        "selected_n": 60,
+        "selection_metrics": {
+          "candidate_signals": 495,
+          "executed_trades": 300,
+          "coverage": 0.6060606060606061,
+          "long_trades": 169,
+          "short_trades": 131,
+          "gross_pnl": 19.019293607967278,
+          "net_pnl": -430.9807063920327,
+          "gross_return_per_trade_bps": 0.6339764535989092,
+          "net_return_per_trade_bps": -14.366023546401093,
+          "median_trade_bps": -15.641154712673341,
+          "win_rate": 0.05,
+          "average_win_bps": 37.3363806650415,
+          "average_loss_bps": -17.087202715424382,
+          "profit_factor": 0.11500259576175612,
+          "turnover": 600000.0,
+          "cost_burden_bps": 4500.0,
+          "average_holding_minutes": 1.34,
+          "max_drawdown": 430.9807063920328,
+          "sharpe": -13.289773176537443,
+          "sortino": -30.23116003298944,
+          "by_day_net_pnl": {
+            "2026-08-15": -23.213271037270367,
+            "2026-08-16": -38.12925238017413,
+            "2026-08-17": -37.09665883805731,
+            "2026-08-18": -22.754997011823235,
+            "2026-08-19": -4.034926399029664,
+            "2026-08-20": -24.65629637905284,
+            "2026-08-21": -47.06490817599925,
+            "2026-08-22": -40.87026918008077,
+            "2026-08-23": -45.13153696741397,
+            "2026-08-24": -33.18865558590119,
+            "2026-08-25": -25.01794217061801,
+            "2026-08-26": -29.010430788460752,
+            "2026-08-27": -35.185978175651584,
+            "2026-08-28": -25.625583302499617
+          },
+          "by_utc_hour_net_pnl": {
+            "2": -16.916840518334517,
+            "3": -11.769830136574669,
+            "5": -19.874743783049528,
+            "6": -19.74664580195005,
+            "8": -26.59970197069836,
+            "11": -35.20992943807069,
+            "13": -36.8720215587164,
+            "14": -7.136710256451833,
+            "19": -14.034731123403743,
+            "20": -12.49891939193447,
+            "21": -28.171548697066818,
+            "23": -21.12202506680081,
+            "1": -18.351528372956544,
+            "4": -14.552182700738648,
+            "9": -27.404583636050834,
+            "10": -26.14316990557245,
+            "15": 1.6366030653474781,
+            "16": -16.379862956798373,
+            "0": -20.196781397716784,
+            "17": -11.966035907546457,
+            "18": -12.743009604555589,
+            "7": -11.655225941539323,
+            "22": -8.907143529248756,
+            "12": -14.364137761604544
+          },
+          "by_volatility_quartile_net_pnl": {
+            "1": -111.17872754529546,
+            "2": -115.05298777841847,
+            "3": -113.91091849141799,
+            "4": -90.8380725769008
+          },
+          "by_efficiency_quartile_net_pnl": {
+            "3": -83.75569564179791,
+            "4": -319.91263218046066,
+            "1": -3.0041333873221916,
+            "2": -24.308245182452037
+          }
+        },
+        "validation_metrics": {
+          "candidate_signals": 228,
+          "executed_trades": 137,
+          "coverage": 0.6008771929824561,
+          "long_trades": 75,
+          "short_trades": 62,
+          "gross_pnl": -18.19140738431846,
+          "net_pnl": -223.69140738431844,
+          "gross_return_per_trade_bps": -1.3278399550597417,
+          "net_return_per_trade_bps": -16.327839955059744,
+          "median_trade_bps": -16.53948786370428,
+          "win_rate": 0.021897810218978103,
+          "average_win_bps": 9.773765349092406,
+          "average_loss_bps": -16.91220425291389,
+          "profit_factor": 0.012938327782208455,
+          "turnover": 274000.0,
+          "cost_burden_bps": 2055.0,
+          "average_holding_minutes": 1.3211678832116789,
+          "max_drawdown": 223.69140738431847,
+          "sharpe": -26.008224761994644,
+          "sortino": -30.77173558934581,
+          "by_day_net_pnl": {
+            "2026-08-29": -23.55708509868718,
+            "2026-08-30": -38.74412267217394,
+            "2026-08-31": -33.909840399965006,
+            "2026-09-01": -47.67048592889813,
+            "2026-09-02": -25.88798289262121,
+            "2026-09-03": -27.96677812681712,
+            "2026-09-04": -25.95511226515588
+          },
+          "by_utc_hour_net_pnl": {
+            "0": -8.351444514067822,
+            "4": -8.894649297755844,
+            "5": -14.87935931332717,
+            "6": -17.989250815335964,
+            "11": -3.7120407492304803,
+            "13": -10.903702099732394,
+            "14": -8.536582591538268,
+            "16": -16.587975992302482,
+            "18": -12.154543035799762,
+            "21": -14.184673321006526,
+            "22": -3.241971328806878,
+            "7": -6.455992172955165,
+            "8": -14.532237102691067,
+            "9": -11.06269019655081,
+            "12": -13.951022799156151,
+            "19": -7.753891238531478,
+            "20": -6.253573773430382,
+            "23": -13.30623510019584,
+            "2": -11.539660890468975,
+            "10": -2.989845100663799,
+            "17": -2.4880608491716334,
+            "3": -5.460249730935724,
+            "15": -5.228313727303585,
+            "1": -3.233441643360255
+          },
+          "by_volatility_quartile_net_pnl": {
+            "1": -52.07928268850843,
+            "2": -37.37501994608718,
+            "3": -70.26642283927586,
+            "4": -63.97068191044697
+          },
+          "by_efficiency_quartile_net_pnl": {
+            "3": -33.668430103599064,
+            "2": -6.248194305175696,
+            "4": -183.7747829755437
+          }
+        }
+      },
+      {
+        "selection_start": "2026-08-22T00:00:00+00:00",
+        "selection_end": "2026-09-05T00:00:00+00:00",
+        "validation_end": "2026-09-12T00:00:00+00:00",
+        "selected_strategy": "S4_BREAKOUT_VOL_ER_VOLUME_ETH",
+        "selected_n": 60,
+        "selection_metrics": {
+          "candidate_signals": 472,
+          "executed_trades": 286,
+          "coverage": 0.6059322033898306,
+          "long_trades": 144,
+          "short_trades": 142,
+          "gross_pnl": -28.721803554944355,
+          "net_pnl": -457.72180355494436,
+          "gross_return_per_trade_bps": -1.004258865557495,
+          "net_return_per_trade_bps": -16.004258865557496,
+          "median_trade_bps": -16.28247089725142,
+          "win_rate": 0.027972027972027972,
+          "average_win_bps": 12.957580457808328,
+          "average_loss_bps": -16.837693090690323,
+          "profit_factor": 0.022145552313250577,
+          "turnover": 572000.0,
+          "cost_burden_bps": 4290.0,
+          "average_holding_minutes": 1.2972027972027973,
+          "max_drawdown": 457.7218035549441,
+          "sharpe": -32.42857172522042,
+          "sortino": -40.450825109657906,
+          "by_day_net_pnl": {
+            "2026-08-22": -40.87026918008077,
+            "2026-08-23": -45.13153696741397,
+            "2026-08-24": -33.18865558590119,
+            "2026-08-25": -25.01794217061801,
+            "2026-08-26": -29.010430788460752,
+            "2026-08-27": -35.185978175651584,
+            "2026-08-28": -25.625583302499617,
+            "2026-08-29": -23.55708509868718,
+            "2026-08-30": -38.74412267217394,
+            "2026-08-31": -33.909840399965006,
+            "2026-09-01": -47.67048592889813,
+            "2026-09-02": -25.88798289262121,
+            "2026-09-03": -27.96677812681712,
+            "2026-09-04": -25.95511226515588
+          },
+          "by_utc_hour_net_pnl": {
+            "0": -17.706982789471674,
+            "4": -18.74237627495083,
+            "5": -25.669653980272972,
+            "6": -22.656925525832243,
+            "8": -36.11018137153757,
+            "9": -24.000607224871274,
+            "10": -17.702904841948513,
+            "13": -27.842589937324398,
+            "14": -14.270459320447165,
+            "15": -17.634200258622656,
+            "16": -24.870343446621405,
+            "17": -10.74134390904118,
+            "19": -15.54361001377101,
+            "21": -27.642265798893877,
+            "23": -23.289200213371814,
+            "2": -18.33720895491851,
+            "3": -9.917620765090774,
+            "7": -11.755675738352496,
+            "11": -18.46196144563754,
+            "18": -23.02527658903251,
+            "20": -12.661026313558743,
+            "1": -12.993936584925859,
+            "12": -20.038803564170077,
+            "22": -6.106648692279276
+          },
+          "by_volatility_quartile_net_pnl": {
+            "4": -113.70329640846418,
+            "3": -129.6799263568131,
+            "1": -112.27032064247189,
+            "2": -102.06826014719515
+          },
+          "by_efficiency_quartile_net_pnl": {
+            "4": -371.2557929304826,
+            "3": -75.40164816751957,
+            "2": -11.064362456942023
+          }
+        },
+        "validation_metrics": {
+          "candidate_signals": 197,
+          "executed_trades": 129,
+          "coverage": 0.6548223350253807,
+          "long_trades": 54,
+          "short_trades": 75,
+          "gross_pnl": 6.326799085752955,
+          "net_pnl": -187.17320091424705,
+          "gross_return_per_trade_bps": 0.4904495415312369,
+          "net_return_per_trade_bps": -14.509550458468762,
+          "median_trade_bps": -15.751154900660023,
+          "win_rate": 0.046511627906976744,
+          "average_win_bps": 17.706830271798108,
+          "average_loss_bps": -16.081081225798858,
+          "profit_factor": 0.05371204871167391,
+          "turnover": 258000.0,
+          "cost_burden_bps": 1935.0,
+          "average_holding_minutes": 1.2635658914728682,
+          "max_drawdown": 189.03638260299903,
+          "sharpe": -15.739305279127187,
+          "sortino": -25.620984716658274,
+          "by_day_net_pnl": {
+            "2026-09-05": -21.860478588065533,
+            "2026-09-06": -36.336530798336284,
+            "2026-09-07": -34.04029212749296,
+            "2026-09-08": -23.905317069354588,
+            "2026-09-09": -35.545455778048314,
+            "2026-09-10": -17.829130620669858,
+            "2026-09-11": -17.65599593227948
+          },
+          "by_utc_hour_net_pnl": {
+            "4": -10.474833354178307,
+            "5": -10.44279615719034,
+            "6": -8.374341198282114,
+            "8": -9.208692136289045,
+            "11": -11.19682562200446,
+            "12": -12.633420243918547,
+            "13": -10.974224305082702,
+            "16": -6.476604485736387,
+            "19": -6.981985591081089,
+            "21": -5.510838344179642,
+            "23": -6.875882796864401,
+            "1": -9.779486758725024,
+            "3": -8.908767723353854,
+            "7": -12.084851897590557,
+            "9": -14.876953942820554,
+            "14": -7.988492546401151,
+            "15": 0.21030301773284332,
+            "18": -9.635300603642975,
+            "20": -4.663277010823526,
+            "22": -9.604038560371166,
+            "0": -3.406442935608986,
+            "2": -1.82604545943976,
+            "10": -1.9815795810257928,
+            "17": -3.4778226773695105
+          },
+          "by_volatility_quartile_net_pnl": {
+            "1": -44.04040063722087,
+            "2": -48.282411406531516,
+            "3": -50.590094332997225,
+            "4": -44.26029453749741
+          },
+          "by_efficiency_quartile_net_pnl": {
+            "4": -146.28876108577333,
+            "3": -29.870181384564905,
+            "1": -2.870403746050851,
+            "2": -8.143854697857993
+          }
+        }
+      },
+      {
+        "selection_start": "2026-08-29T00:00:00+00:00",
+        "selection_end": "2026-09-12T00:00:00+00:00",
+        "validation_end": "2026-09-19T00:00:00+00:00",
+        "selected_strategy": "S4_BREAKOUT_VOL_ER_VOLUME_ETH",
+        "selected_n": 60,
+        "selection_metrics": {
+          "candidate_signals": 425,
+          "executed_trades": 266,
+          "coverage": 0.6258823529411764,
+          "long_trades": 129,
+          "short_trades": 137,
+          "gross_pnl": -11.864608298565505,
+          "net_pnl": -410.8646082985655,
+          "gross_return_per_trade_bps": -0.44603790596110926,
+          "net_return_per_trade_bps": -15.44603790596111,
+          "median_trade_bps": -16.023378973863398,
+          "win_rate": 0.03383458646616541,
+          "average_win_bps": 15.062475297562871,
+          "average_loss_bps": -16.514429418924983,
+          "profit_factor": 0.03194053311201391,
+          "turnover": 532000.0,
+          "cost_burden_bps": 3990.0,
+          "average_holding_minutes": 1.2932330827067668,
+          "max_drawdown": 412.7277899873175,
+          "sharpe": -27.906053117879324,
+          "sortino": -39.867105359399744,
+          "by_day_net_pnl": {
+            "2026-08-29": -23.55708509868718,
+            "2026-08-30": -38.74412267217394,
+            "2026-08-31": -33.909840399965006,
+            "2026-09-01": -47.67048592889813,
+            "2026-09-02": -25.88798289262121,
+            "2026-09-03": -27.96677812681712,
+            "2026-09-04": -25.95511226515588,
+            "2026-09-05": -21.860478588065533,
+            "2026-09-06": -36.336530798336284,
+            "2026-09-07": -34.04029212749296,
+            "2026-09-08": -23.905317069354588,
+            "2026-09-09": -35.545455778048314,
+            "2026-09-10": -17.829130620669858,
+            "2026-09-11": -17.65599593227948
+          },
+          "by_utc_hour_net_pnl": {
+            "0": -11.757887449676808,
+            "4": -19.36948265193415,
+            "5": -25.322155470517508,
+            "6": -26.36359201361808,
+            "11": -14.90886637123494,
+            "13": -21.877926404815092,
+            "14": -16.525075137939417,
+            "16": -23.06458047803887,
+            "18": -21.78984363944273,
+            "21": -19.695511665186167,
+            "22": -12.846009889178042,
+            "7": -18.54084407054572,
+            "8": -23.740929238980115,
+            "9": -25.93964413937136,
+            "12": -26.5844430430747,
+            "19": -14.735876829612568,
+            "20": -10.916850784253908,
+            "23": -20.18211789706024,
+            "2": -13.365706349908734,
+            "10": -4.971424681689592,
+            "17": -5.965883526541144,
+            "3": -14.36901745428958,
+            "15": -5.018010709570741,
+            "1": -13.01292840208528
+          },
+          "by_volatility_quartile_net_pnl": {
+            "2": -98.69605152030299,
+            "1": -91.61730936168249,
+            "3": -99.28436188435434,
+            "4": -121.26688553222567
+          },
+          "by_efficiency_quartile_net_pnl": {
+            "3": -62.30816613194051,
+            "4": -332.80687070360796,
+            "2": -12.87916771696611,
+            "1": -2.870403746050851
+          }
+        },
+        "validation_metrics": {
+          "candidate_signals": 216,
+          "executed_trades": 123,
+          "coverage": 0.5694444444444444,
+          "long_trades": 59,
+          "short_trades": 64,
+          "gross_pnl": 20.219088085688615,
+          "net_pnl": -164.2809119143114,
+          "gross_return_per_trade_bps": 1.643828299649481,
+          "net_return_per_trade_bps": -13.356171700350517,
+          "median_trade_bps": -15.0,
+          "win_rate": 0.08130081300813008,
+          "average_win_bps": 22.139787252704615,
+          "average_loss_bps": -16.49740700593062,
+          "profit_factor": 0.11876249446350044,
+          "turnover": 246000.0,
+          "cost_burden_bps": 1845.0,
+          "average_holding_minutes": 1.3983739837398375,
+          "max_drawdown": 172.96893467087693,
+          "sharpe": -10.851670700621325,
+          "sortino": -20.82608193522064,
+          "by_day_net_pnl": {
+            "2026-09-12": -21.323595889824887,
+            "2026-09-13": -29.398057479858437,
+            "2026-09-14": -43.82377468946066,
+            "2026-09-15": -17.305902328097126,
+            "2026-09-16": -21.72186645838846,
+            "2026-09-17": -25.45142680064064,
+            "2026-09-18": -5.2562882680411755
+          },
+          "by_utc_hour_net_pnl": {
+            "0": -14.182149438194557,
+            "2": -6.846851825659689,
+            "4": -4.106946393802542,
+            "6": -16.879772147339143,
+            "10": -5.206600056194828,
+            "11": -6.587388973009917,
+            "14": -8.497750589976643,
+            "15": -3.5550258409101616,
+            "17": -3.7869562812345916,
+            "18": -12.775061755402593,
+            "20": -7.928578928553636,
+            "23": -10.022149000632355,
+            "1": -9.26117209709792,
+            "5": -12.092166438705188,
+            "8": -8.258976872573314,
+            "9": -3.908019636004062,
+            "12": -2.6355525575460463,
+            "13": -7.0975130905805806,
+            "22": -8.302898670997696,
+            "3": -3.8393817486721495,
+            "7": -2.9966781784019307,
+            "16": -1.5,
+            "19": -2.2471380812480444,
+            "21": -1.7661833115737977
+          },
+          "by_volatility_quartile_net_pnl": {
+            "1": -47.19146503339401,
+            "2": -46.55007307320149,
+            "3": -39.43789270396526,
+            "4": -31.101481103750615
+          },
+          "by_efficiency_quartile_net_pnl": {
+            "4": -118.64993840390045,
+            "3": -40.61817888353853,
+            "2": -5.012794626872368
+          }
+        }
+      }
+    ],
+    "research_labels": {
+      "horizons_minutes": {
+        "1": {
+          "n": 86356,
+          "mean_return_bps": 0.024462838468205267,
+          "median_return_bps": 0.0
+        },
+        "3": {
+          "n": 86354,
+          "mean_return_bps": 0.0731637380475222,
+          "median_return_bps": 0.0
+        },
+        "5": {
+          "n": 86352,
+          "mean_return_bps": 0.12170704387655545,
+          "median_return_bps": 0.0
+        },
+        "10": {
+          "n": 86347,
+          "mean_return_bps": 0.24244241838847366,
+          "median_return_bps": -0.1254689401641862
+        },
+        "15": {
+          "n": 86342,
+          "mean_return_bps": 0.3629291359539422,
+          "median_return_bps": -0.12787396741820167
+        },
+        "30": {
+          "n": 86327,
+          "mean_return_bps": 0.7250563286447054,
+          "median_return_bps": 0.0
+        },
+        "60": {
+          "n": 86297,
+          "mean_return_bps": 1.442693592999852,
+          "median_return_bps": 0.15544605244777188
+        }
+      }
+    }
+  },
+  "microstructure": {
+    "signal_analysis": {
+      "symbol": "PF_XBTUSD",
+      "split": {
+        "selection_fraction": 0.7,
+        "selection_n": 28506,
+        "validation_n": 12218
+      },
+      "hurdle_semantics": "mid-price diagnostic; 15 bps round-trip is not subtracted from every 30s label",
+      "feature_diagnostics": {
+        "ofi_proxy_10s": {
+          "full_sample_n": 38068,
+          "rank_corr_30s": 0.0004641130027349933,
+          "bins": [
+            {
+              "bin": 0,
+              "n": 38068,
+              "mean_feature": 2.600609435746559e-06,
+              "mean_future_30s_bps": -0.0275143367989093
+            }
+          ]
+        },
+        "trade_flow_imbalance_10s": {
+          "full_sample_n": 31942,
+          "rank_corr_30s": -0.021423140861757558,
+          "bins": [
+            {
+              "bin": 0,
+              "n": 12778,
+              "mean_feature": -0.971867891581373,
+              "mean_future_30s_bps": -0.0017506991631810404
+            },
+            {
+              "bin": 1,
+              "n": 6390,
+              "mean_feature": -0.09794943921834372,
+              "mean_future_30s_bps": -0.07842058920449377
+            },
+            {
+              "bin": 2,
+              "n": 12774,
+              "mean_feature": 0.9285163509653731,
+              "mean_future_30s_bps": -0.02522297344184033
+            }
+          ]
+        },
+        "l5_imbalance": {
+          "full_sample_n": 38071,
+          "rank_corr_30s": -0.01005039914520612,
+          "bins": [
+            {
+              "bin": 0,
+              "n": 7672,
+              "mean_feature": -0.29707799876549507,
+              "mean_future_30s_bps": -0.1056829943829384
+            },
+            {
+              "bin": 1,
+              "n": 27264,
+              "mean_feature": -0.2917001123775886,
+              "mean_future_30s_bps": 0.0
+            },
+            {
+              "bin": 2,
+              "n": 3135,
+              "mean_feature": 0.5176117850431099,
+              "mean_future_30s_bps": -0.07547554716267163
+            }
+          ]
+        },
+        "microprice_displacement_bps": {
+          "full_sample_n": 38071,
+          "rank_corr_30s": -0.01005039914520612,
+          "bins": [
+            {
+              "bin": 0,
+              "n": 7672,
+              "mean_feature": -0.018275290830926594,
+              "mean_future_30s_bps": -0.1056829943829384
+            },
+            {
+              "bin": 1,
+              "n": 27264,
+              "mean_feature": -0.0179936286659465,
+              "mean_future_30s_bps": 0.0
+            },
+            {
+              "bin": 2,
+              "n": 3135,
+              "mean_feature": 0.032199342805912114,
+              "mean_future_30s_bps": -0.07547554716267163
+            }
+          ]
+        },
+        "spread_bps": {
+          "full_sample_n": 38071,
+          "rank_corr_30s": 0.05316607220528304,
+          "bins": [
+            {
+              "bin": 0,
+              "n": 8157,
+              "mean_feature": 0.12302671310840589,
+              "mean_future_30s_bps": -0.12840698458512678
+            },
+            {
+              "bin": 1,
+              "n": 27264,
+              "mean_feature": 0.12337073522789653,
+              "mean_future_30s_bps": 0.0
+            },
+            {
+              "bin": 2,
+              "n": 2650,
+              "mean_feature": 0.12449418673044738,
+              "mean_future_30s_bps": 0.0
+            }
+          ]
+        }
+      },
+      "nested_models": [
+        {
+          "model": "M0",
+          "features": [
+            "m0_score",
+            "vol60"
+          ],
+          "train_n": 28273,
+          "test_n": 9798,
+          "oos_target_std_bps": 0.0,
+          "oos_informative_target": false,
+          "oos_mae_bps": 0.03704650278572769,
+          "oos_rmse_bps": 0.0370465027857277,
+          "oos_direction_hit_rate": 0.0,
+          "oos_rank_corr": null,
+          "mean_predicted_bps": -0.03704650278572769,
+          "mean_realized_bps": 0.0
+        },
+        {
+          "model": "M1",
+          "features": [
+            "m0_score",
+            "vol60",
+            "ofi_proxy_10s"
+          ],
+          "train_n": 28272,
+          "test_n": 9796,
+          "oos_target_std_bps": 0.0,
+          "oos_informative_target": false,
+          "oos_mae_bps": 0.03706092138409445,
+          "oos_rmse_bps": 0.03706092138409446,
+          "oos_direction_hit_rate": 0.0,
+          "oos_rank_corr": null,
+          "mean_predicted_bps": -0.03706092138409445,
+          "mean_realized_bps": 0.0
+        },
+        {
+          "model": "M2",
+          "features": [
+            "m0_score",
+            "vol60",
+            "ofi_proxy_10s",
+            "trade_flow_imbalance_10s"
+          ],
+          "train_n": 23797,
+          "test_n": 8142,
+          "oos_target_std_bps": 0.0,
+          "oos_informative_target": false,
+          "oos_mae_bps": 0.03427078241868143,
+          "oos_rmse_bps": 0.03482602528993529,
+          "oos_direction_hit_rate": 0.0,
+          "oos_rank_corr": null,
+          "mean_predicted_bps": -0.03427078241868143,
+          "mean_realized_bps": 0.0
+        },
+        {
+          "model": "M3",
+          "features": [
+            "m0_score",
+            "vol60",
+            "ofi_proxy_10s",
+            "trade_flow_imbalance_10s",
+            "l5_imbalance"
+          ],
+          "train_n": 23797,
+          "test_n": 8142,
+          "oos_target_std_bps": 0.0,
+          "oos_informative_target": false,
+          "oos_mae_bps": 0.3124966802623177,
+          "oos_rmse_bps": 0.5375716258205585,
+          "oos_direction_hit_rate": 0.0,
+          "oos_rank_corr": null,
+          "mean_predicted_bps": -0.3124966802623177,
+          "mean_realized_bps": 0.0
+        },
+        {
+          "model": "M4",
+          "features": [
+            "m0_score",
+            "vol60",
+            "ofi_proxy_10s",
+            "trade_flow_imbalance_10s",
+            "l5_imbalance",
+            "microprice_displacement_bps"
+          ],
+          "train_n": 23797,
+          "test_n": 8142,
+          "oos_target_std_bps": 0.0,
+          "oos_informative_target": false,
+          "oos_mae_bps": 0.39785601703707685,
+          "oos_rmse_bps": 0.7060428082320989,
+          "oos_direction_hit_rate": 0.0,
+          "oos_rank_corr": null,
+          "mean_predicted_bps": -0.39785601703707685,
+          "mean_realized_bps": 0.0
+        },
+        {
+          "model": "M5",
+          "features": [
+            "m0_score",
+            "vol60",
+            "ofi_proxy_10s",
+            "trade_flow_imbalance_10s",
+            "l5_imbalance",
+            "microprice_displacement_bps",
+            "spread_bps",
+            "bid_depth_l5",
+            "ask_depth_l5"
+          ],
+          "train_n": 23797,
+          "test_n": 8142,
+          "oos_target_std_bps": 0.0,
+          "oos_informative_target": false,
+          "oos_mae_bps": 1.8171957827707872,
+          "oos_rmse_bps": 3.3300493692193696,
+          "oos_direction_hit_rate": 0.0,
+          "oos_rank_corr": null,
+          "mean_predicted_bps": -1.8099601195964468,
+          "mean_realized_bps": 0.0
+        }
+      ]
+    },
+    "maker": {
+      "symbol": "PF_XBTUSD",
+      "official_cost_note": "maker fee/rebate set to 0 because account tier is not assumed; replace with signed fee schedule before economics are used",
+      "results": [
+        {
+          "fill_model": "optimistic_touch",
+          "toxicity_level": 0,
+          "states": 40724,
+          "fills": 7310,
+          "partial_fills": 3534,
+          "fill_rate_per_state": 0.17950103133287496,
+          "gross_spread_capture": 28.254489109987173,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": 20.128531995245794,
+          "max_inventory_usd": 2999.707142883509,
+          "max_drawdown": 5.330398011990837,
+          "adverse_selection_bps": {
+            "1s": -0.0037364563870080267,
+            "5s": -0.003737478953069058,
+            "10s": -0.0037400378185716383,
+            "30s": 0.001180589782890141,
+            "60s": 0.0
+          },
+          "inventory_final_usd": 361.9349928834989,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "optimistic_touch",
+          "toxicity_level": 1,
+          "states": 40724,
+          "fills": 7310,
+          "partial_fills": 3534,
+          "fill_rate_per_state": 0.17950103133287496,
+          "gross_spread_capture": 28.254489109987173,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": 20.128531995245794,
+          "max_inventory_usd": 2999.707142883509,
+          "max_drawdown": 5.330398011990837,
+          "adverse_selection_bps": {
+            "1s": -0.0037364563870080267,
+            "5s": -0.003737478953069058,
+            "10s": -0.0037400378185716383,
+            "30s": 0.001180589782890141,
+            "60s": 0.0
+          },
+          "inventory_final_usd": 361.9349928834989,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "optimistic_touch",
+          "toxicity_level": 2,
+          "states": 40724,
+          "fills": 4071,
+          "partial_fills": 1940,
+          "fill_rate_per_state": 0.09996562223750123,
+          "gross_spread_capture": 15.791418389598785,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": 4.421792046303381,
+          "max_inventory_usd": 2999.2329645198943,
+          "max_drawdown": 7.500170740573594,
+          "adverse_selection_bps": {
+            "1s": -0.006709284251787933,
+            "5s": -0.006712582007625627,
+            "10s": -0.006717534724306118,
+            "30s": -0.009263752173202898,
+            "60s": -0.018153074927555628
+          },
+          "inventory_final_usd": 832.2247736557325,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "optimistic_touch",
+          "toxicity_level": 3,
+          "states": 40724,
+          "fills": 15,
+          "partial_fills": 8,
+          "fill_rate_per_state": 0.0003683331696297024,
+          "gross_spread_capture": 0.05272810802715141,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": -0.08675338248758635,
+          "max_inventory_usd": 2531.458953550602,
+          "max_drawdown": 6.41293504112582,
+          "adverse_selection_bps": {
+            "1s": 0.0,
+            "5s": 0.0,
+            "10s": 0.0,
+            "30s": 0.0,
+            "60s": 0.0
+          },
+          "inventory_final_usd": 2525.0460185094757,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "optimistic_touch",
+          "toxicity_level": 4,
+          "states": 40724,
+          "fills": 3,
+          "partial_fills": 2,
+          "fill_rate_per_state": 7.366663392594048e-05,
+          "gross_spread_capture": 0.012995865983246369,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": -26.810471523438537,
+          "max_inventory_usd": 2114.57035,
+          "max_drawdown": 26.82346738942033,
+          "adverse_selection_bps": {
+            "1s": 0.0,
+            "5s": 0.0,
+            "10s": 0.0,
+            "30s": 0.0,
+            "60s": 0.0
+          },
+          "inventory_final_usd": 2087.746882610579,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "conservative_queue",
+          "toxicity_level": 0,
+          "states": 40724,
+          "fills": 624,
+          "partial_fills": 68,
+          "fill_rate_per_state": 0.01532265985659562,
+          "gross_spread_capture": 3.6029291891793767,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": 2.090854564165056,
+          "max_inventory_usd": 2976.2814247773063,
+          "max_drawdown": 3.6229191690435982,
+          "adverse_selection_bps": {
+            "1s": 0.0,
+            "5s": 0.0,
+            "10s": 0.0,
+            "30s": 0.015192028273192656,
+            "60s": 0.01654668091457484
+          },
+          "inventory_final_usd": 574.0865878748162,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "conservative_queue",
+          "toxicity_level": 1,
+          "states": 40724,
+          "fills": 624,
+          "partial_fills": 68,
+          "fill_rate_per_state": 0.01532265985659562,
+          "gross_spread_capture": 3.6029291891793767,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": 2.090854564165056,
+          "max_inventory_usd": 2976.2814247773063,
+          "max_drawdown": 3.6229191690435982,
+          "adverse_selection_bps": {
+            "1s": 0.0,
+            "5s": 0.0,
+            "10s": 0.0,
+            "30s": 0.015192028273192656,
+            "60s": 0.01654668091457484
+          },
+          "inventory_final_usd": 574.0865878748162,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "conservative_queue",
+          "toxicity_level": 2,
+          "states": 40724,
+          "fills": 347,
+          "partial_fills": 38,
+          "fill_rate_per_state": 0.008520773990767115,
+          "gross_spread_capture": 2.010568218047937,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": -9.15963126393035,
+          "max_inventory_usd": 2988.3044743961987,
+          "max_drawdown": 10.397781679101172,
+          "adverse_selection_bps": {
+            "1s": 0.0,
+            "5s": 0.0,
+            "10s": 0.0,
+            "30s": 0.0,
+            "60s": 0.002479813476932785
+          },
+          "inventory_final_usd": 75.72778801793315,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "conservative_queue",
+          "toxicity_level": 3,
+          "states": 40724,
+          "fills": 7,
+          "partial_fills": 0,
+          "fill_rate_per_state": 0.00017188881249386112,
+          "gross_spread_capture": 0.04326959367929226,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": -1.8274157612668205,
+          "max_inventory_usd": 2998.129314645054,
+          "max_drawdown": 1.8929267228413664,
+          "adverse_selection_bps": {
+            "1s": 0.0,
+            "5s": 0.0,
+            "10s": 0.0,
+            "30s": 0.0,
+            "60s": 0.0
+          },
+          "inventory_final_usd": 2998.129314645054,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        },
+        {
+          "fill_model": "conservative_queue",
+          "toxicity_level": 4,
+          "states": 40724,
+          "fills": 3,
+          "partial_fills": 1,
+          "fill_rate_per_state": 7.366663392594048e-05,
+          "gross_spread_capture": 0.015208194333604609,
+          "maker_fee_bps_per_side": 0.0,
+          "fees": 0.0,
+          "net_pnl": -18.52645919508541,
+          "max_inventory_usd": 2443.1507951105796,
+          "max_drawdown": 18.541667389419672,
+          "adverse_selection_bps": {
+            "1s": 0.0,
+            "5s": 0.0,
+            "10s": 0.0,
+            "30s": 0.0,
+            "60s": 0.0
+          },
+          "inventory_final_usd": 2443.1507951105796,
+          "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+        }
+      ]
+    },
+    "maker_comparison": {
+      "optimistic_q0": {
+        "fill_model": "optimistic_touch",
+        "toxicity_level": 0,
+        "states": 40724,
+        "fills": 7310,
+        "partial_fills": 3534,
+        "fill_rate_per_state": 0.17950103133287496,
+        "gross_spread_capture": 28.254489109987173,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": 20.128531995245794,
+        "max_inventory_usd": 2999.707142883509,
+        "max_drawdown": 5.330398011990837,
+        "adverse_selection_bps": {
+          "1s": -0.0037364563870080267,
+          "5s": -0.003737478953069058,
+          "10s": -0.0037400378185716383,
+          "30s": 0.001180589782890141,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 361.9349928834989,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      "conservative_q0": {
+        "fill_model": "conservative_queue",
+        "toxicity_level": 0,
+        "states": 40724,
+        "fills": 624,
+        "partial_fills": 68,
+        "fill_rate_per_state": 0.01532265985659562,
+        "gross_spread_capture": 3.6029291891793767,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": 2.090854564165056,
+        "max_inventory_usd": 2976.2814247773063,
+        "max_drawdown": 3.6229191690435982,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.015192028273192656,
+          "60s": 0.01654668091457484
+        },
+        "inventory_final_usd": 574.0865878748162,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      "optimistic_q4": {
+        "fill_model": "optimistic_touch",
+        "toxicity_level": 4,
+        "states": 40724,
+        "fills": 3,
+        "partial_fills": 2,
+        "fill_rate_per_state": 7.366663392594048e-05,
+        "gross_spread_capture": 0.012995865983246369,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": -26.810471523438537,
+        "max_inventory_usd": 2114.57035,
+        "max_drawdown": 26.82346738942033,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.0,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 2087.746882610579,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      },
+      "conservative_q4": {
+        "fill_model": "conservative_queue",
+        "toxicity_level": 4,
+        "states": 40724,
+        "fills": 3,
+        "partial_fills": 1,
+        "fill_rate_per_state": 7.366663392594048e-05,
+        "gross_spread_capture": 0.015208194333604609,
+        "maker_fee_bps_per_side": 0.0,
+        "fees": 0.0,
+        "net_pnl": -18.52645919508541,
+        "max_inventory_usd": 2443.1507951105796,
+        "max_drawdown": 18.541667389419672,
+        "adverse_selection_bps": {
+          "1s": 0.0,
+          "5s": 0.0,
+          "10s": 0.0,
+          "30s": 0.0,
+          "60s": 0.0
+        },
+        "inventory_final_usd": 2443.1507951105796,
+        "limitations": "Touch model uses next-second taker-side volume as a fill proxy; queue model applies 50% displayed depth ahead and a 50% residual fill haircut. No exact queue position is observable."
+      }
+    }
+  },
+  "jev_manifest": {
+    "manifest_version": 1,
+    "status": "DESIGN_ONLY_NO_PAID_CALLS",
+    "created_at": "2026-09-20T11:14:15.592070+00:00",
+    "data_cutoff": "2026-09-20T10:52:21+00:00",
+    "state_version": "market-state-v3-compact-proposed",
+    "target_tokens": "500-800 where practical",
+    "candidate_fields": [
+      "symbol",
+      "candidate_type",
+      "breakout_strength",
+      "momentum_normalized",
+      "volatility_regime",
+      "efficiency_ratio",
+      "volume_confirmation",
+      "ofi_10s",
+      "ofi_30s",
+      "ofi_60s",
+      "trade_flow_imbalance",
+      "book_imbalance_L1",
+      "book_imbalance_L5",
+      "microprice_displacement",
+      "spread_bps",
+      "depth",
+      "liquidity_state"
+    ],
+    "questions": {
+      "regime": [
+        "TRENDING",
+        "MEAN_REVERTING",
+        "DISORDERED"
+      ],
+      "signal_consistency": "native Noul",
+      "liquidity_stressed": "native Noul",
+      "toxic_bid": "native Noul",
+      "toxic_ask": "native Noul",
+      "quote_environment": [
+        "BID_FAVORED",
+        "ASK_FAVORED",
+        "BOTH_ACCEPTABLE",
+        "ABSTAIN"
+      ]
+    },
+    "labels": [
+      "future mid return 1s/5s/10s/30s/60s",
+      "adverse selection after hypothetical passive bid/ask fill"
+    ],
+    "budget_usd": 0.0,
+    "no_inference_launched": true
+  },
+  "explicit_answers": {
+    "A": "Evet, d\u00fczeltilmi\u015f S1 br\u00fct PnL S0'a g\u00f6re iyile\u015fti (4.82 vs -138.74 USD), ancak OOS net maliyet sonras\u0131 pozitif de\u011fil.",
+    "B": "ER filtresi br\u00fct sonucu 4.82 \u2192 12.80 USD yapt\u0131; bu tek ba\u015f\u0131na istikrarl\u0131 maliyet-sonras\u0131 kan\u0131t de\u011fil.",
+    "C": "Volume filtresi bu ko\u015fuda br\u00fct sonucu 12.80 \u2192 12.26 USD yapt\u0131; incremental de\u011fer OOS'ta do\u011frulanmad\u0131.",
+    "D": "ETH confirmation tam \u00f6rneklemde br\u00fct sonucu 12.26 \u2192 22.47 USD art\u0131rd\u0131; walk-forward'da maliyet sonras\u0131 h\u00e2l\u00e2 negatif.",
+    "E": "OOS br\u00fct toplam 8.35 USD; pozitif g\u00f6r\u00fcnen katmanlar fold-stabil bir aday olu\u015fturmuyor.",
+    "F": "Hay\u0131r. Se\u00e7ilen \u00fc\u00e7 validation fold toplam neti -575.15 USD (15 bps round-trip).",
+    "G": "Bu cutoff'ta OFI, trade-flow ve book imbalance k\u0131sa vadeli mid hareketinde g\u00fc\u00e7l\u00fc/stabil OOS kan\u0131t vermedi; son validation hedefi varyasyonsuzdu.",
+    "H": "Tam \u00f6rneklem tan\u0131s\u0131nda spread en b\u00fcy\u00fck rank korelasyonu g\u00f6sterdi; bu likidite/\u00f6rneklem etkisi olabilir, stabil incremental alpha de\u011fildir.",
+    "I": "G\u00f6sterilmedi: microstructure nested modellerinin ge\u00e7 validation hedefi degenerate (std=0), bu nedenle directional iyile\u015fme iddias\u0131 yap\u0131lamaz.",
+    "J": "Optimistic touch pozitif g\u00f6r\u00fcn\u00fcyor, fakat conservative queue Q0 2.09 USD ve maker \u00fccreti 0 varsay\u0131m\u0131 kullan\u0131yor; ekonomik kan\u0131t de\u011fil.",
+    "K": "Toxicity seviyeleri fill oran\u0131n\u0131 d\u00fc\u015f\u00fcrd\u00fc; k\u0131sa tek oturumda daha iyi net sonu\u00e7 i\u00e7in g\u00fcvenilir kan\u0131t yok.",
+    "L": "\u015eu an hi\u00e7biri. Directional taraf 15 bps'de negatif; maker taraf\u0131 ise fee/queue varsay\u0131mlar\u0131na a\u015f\u0131r\u0131 duyarl\u0131.",
+    "M": "Jev ancak deterministic modelin zaten hesaplamad\u0131\u011f\u0131 rejim tutarl\u0131l\u0131\u011f\u0131, likidite stresi ve bid/ask toxicity meta-yarg\u0131lar\u0131n\u0131 ekleyebilir.",
+    "N": "Hay\u0131r. Yeni \u00fccretli Jev \u00e7a\u011fr\u0131s\u0131 i\u00e7in yeterli cost-surviving, OOS kan\u0131t yok; yaln\u0131zca manifest haz\u0131rland\u0131."
+  }
+}

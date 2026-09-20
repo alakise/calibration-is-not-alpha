@@ -1,0 +1,5 @@
+model,N,brier,log_loss,ECE,split
+constant base rate,40320,0.2112499993848813,0.6135095470917485,0.0,holdout overall
+Jev MOVE_15M_15BPS,40320,0.2131386904761905,0.6186983129774795,0.04218749999999999,holdout overall
+deterministic volatility,12096,0.1662127032640164,0.511811068763083,NA,chronological validation
+deterministic volatility + Jev,12096,0.16619864560090328,0.511776350258877,NA,chronological validation

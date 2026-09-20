@@ -1,0 +1,382 @@
+{
+  "symbol": "PF_XBTUSD",
+  "state_contract": "market-opportunity-v1",
+  "timestamps": 40320,
+  "start": "2026-08-15T00:00:00+00:00",
+  "end": "2026-09-11T23:59:00+00:00",
+  "validation_start": "2026-09-05T00:00:00+00:00",
+  "fixed_hypotheses": {
+    "H0_S3_only": "classical OHLCV S3",
+    "H1_S3_plus_move15_p30": "S3 and P(move_15m_15bps) >= 0.30",
+    "H2_S3_plus_direction_edge_p25": "S3 and higher of long/short 15m event probability >= 0.25"
+  },
+  "assumptions": {
+    "notional_usd": 1000.0,
+    "holding_minutes": 15,
+    "entry": "next completed 1m close after signal",
+    "costs": "round-trip bps grid; no cost value was selected from results",
+    "lookahead": "Jev probabilities and S3 use only the completed candle at signal time"
+  },
+  "results": [
+    {
+      "hypothesis": "H0_S3_only",
+      "round_trip_cost_bps": 5.0,
+      "full_sample": {
+        "trades": 1355,
+        "net_pnl": -615.4011764455739,
+        "net_return_bps": -6154.0117644557395,
+        "win_rate": 0.34095940959409593,
+        "profit_factor": 0.5472336823445347,
+        "max_drawdown": 617.2712892370471,
+        "sharpe": -7.04760810833947,
+        "sortino": -10.801318100168961,
+        "turnover": 2710000.0,
+        "fee_burden_bps": 6775.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 321,
+        "net_pnl": -122.24414017412015,
+        "net_return_bps": -1222.4414017412012,
+        "win_rate": 0.34890965732087226,
+        "profit_factor": 0.5085643175805858,
+        "max_drawdown": 124.11425296559293,
+        "sharpe": -3.548956017218601,
+        "sortino": -4.599132115682571,
+        "turnover": 642000.0,
+        "fee_burden_bps": 1605.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H0_S3_only",
+      "round_trip_cost_bps": 10.0,
+      "full_sample": {
+        "trades": 1355,
+        "net_pnl": -1292.901176445574,
+        "net_return_bps": -12929.01176445574,
+        "win_rate": 0.22656826568265684,
+        "profit_factor": 0.3008185281128517,
+        "max_drawdown": 1293.7712892370446,
+        "sharpe": -14.806375358311195,
+        "sortino": -22.54810171687555,
+        "turnover": 2710000.0,
+        "fee_burden_bps": 13550.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 321,
+        "net_pnl": -282.74414017412016,
+        "net_return_bps": -2827.441401741202,
+        "win_rate": 0.20249221183800623,
+        "profit_factor": 0.22863191458191431,
+        "max_drawdown": 283.6142529655928,
+        "sharpe": -8.208544934546316,
+        "sortino": -10.899081415397479,
+        "turnover": 642000.0,
+        "fee_burden_bps": 3210.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H0_S3_only",
+      "round_trip_cost_bps": 15.0,
+      "full_sample": {
+        "trades": 1355,
+        "net_pnl": -1970.401176445574,
+        "net_return_bps": -19704.01176445574,
+        "win_rate": 0.16457564575645756,
+        "profit_factor": 0.17725630452050173,
+        "max_drawdown": 1970.4011764455713,
+        "sharpe": -22.56514260828292,
+        "sortino": -33.69113880841338,
+        "turnover": 2710000.0,
+        "fee_burden_bps": 20325.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 321,
+        "net_pnl": -443.24414017412016,
+        "net_return_bps": -4432.441401741202,
+        "win_rate": 0.1308411214953271,
+        "profit_factor": 0.11605184954872871,
+        "max_drawdown": 443.2441401741202,
+        "sharpe": -12.868133851874028,
+        "sortino": -16.962497100787644,
+        "turnover": 642000.0,
+        "fee_burden_bps": 4815.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H0_S3_only",
+      "round_trip_cost_bps": 20.0,
+      "full_sample": {
+        "trades": 1355,
+        "net_pnl": -2647.9011764455745,
+        "net_return_bps": -26479.01176445574,
+        "win_rate": 0.11955719557195572,
+        "profit_factor": 0.11076814931866169,
+        "max_drawdown": 2647.9011764455736,
+        "sharpe": -30.32390985825464,
+        "sortino": -44.088722889473765,
+        "turnover": 2710000.0,
+        "fee_burden_bps": 27100.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 321,
+        "net_pnl": -603.7441401741202,
+        "net_return_bps": -6037.441401741202,
+        "win_rate": 0.08722741433021806,
+        "profit_factor": 0.06393434182546563,
+        "max_drawdown": 603.7441401741206,
+        "sharpe": -17.527722769201738,
+        "sortino": -22.665954876963514,
+        "turnover": 642000.0,
+        "fee_burden_bps": 6420.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H1_S3_plus_move15_p30",
+      "round_trip_cost_bps": 5.0,
+      "full_sample": {
+        "trades": 699,
+        "net_pnl": -265.43188535792035,
+        "net_return_bps": -2654.3188535792037,
+        "win_rate": 0.33047210300429186,
+        "profit_factor": 0.6296409257342392,
+        "max_drawdown": 295.18650974160363,
+        "sharpe": -3.949594180208229,
+        "sortino": -7.064082899416076,
+        "turnover": 1398000.0,
+        "fee_burden_bps": 3495.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 175,
+        "net_pnl": -46.15146738299778,
+        "net_return_bps": -461.5146738299778,
+        "win_rate": 0.3142857142857143,
+        "profit_factor": 0.6637673478700714,
+        "max_drawdown": 70.96995764058968,
+        "sharpe": -1.6109305670654166,
+        "sortino": -3.6545842255111345,
+        "turnover": 350000.0,
+        "fee_burden_bps": 875.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H1_S3_plus_move15_p30",
+      "round_trip_cost_bps": 10.0,
+      "full_sample": {
+        "trades": 699,
+        "net_pnl": -614.9318853579205,
+        "net_return_bps": -6149.318853579204,
+        "win_rate": 0.23319027181688126,
+        "profit_factor": 0.3666850973711886,
+        "max_drawdown": 634.2503756155128,
+        "sharpe": -9.150111684431222,
+        "sortino": -16.054339578286204,
+        "turnover": 1398000.0,
+        "fee_burden_bps": 6990.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 175,
+        "net_pnl": -133.65146738299777,
+        "net_return_bps": -1336.5146738299777,
+        "win_rate": 0.18857142857142858,
+        "profit_factor": 0.34662977367347453,
+        "max_drawdown": 152.96995764058966,
+        "sharpe": -4.665143848053149,
+        "sortino": -10.111052630006167,
+        "turnover": 350000.0,
+        "fee_burden_bps": 1750.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H1_S3_plus_move15_p30",
+      "round_trip_cost_bps": 15.0,
+      "full_sample": {
+        "trades": 699,
+        "net_pnl": -964.4318853579205,
+        "net_return_bps": -9644.318853579203,
+        "win_rate": 0.16738197424892703,
+        "profit_factor": 0.22807595480021758,
+        "max_drawdown": 978.2503756155123,
+        "sharpe": -14.350629188654215,
+        "sortino": -24.31223835467988,
+        "turnover": 1398000.0,
+        "fee_burden_bps": 10485.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 175,
+        "net_pnl": -221.1514673829978,
+        "net_return_bps": -2211.514673829978,
+        "win_rate": 0.13142857142857142,
+        "profit_factor": 0.205271230607396,
+        "max_drawdown": 234.96995764058983,
+        "sharpe": -7.719357129040884,
+        "sortino": -15.898003085307568,
+        "turnover": 350000.0,
+        "fee_burden_bps": 2625.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H1_S3_plus_move15_p30",
+      "round_trip_cost_bps": 20.0,
+      "full_sample": {
+        "trades": 699,
+        "net_pnl": -1313.9318853579202,
+        "net_return_bps": -13139.318853579203,
+        "win_rate": 0.12732474964234622,
+        "profit_factor": 0.15114324968347442,
+        "max_drawdown": 1322.2503756155108,
+        "sharpe": -19.551146692877207,
+        "sortino": -32.09986631672298,
+        "turnover": 1398000.0,
+        "fee_burden_bps": 13980.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 175,
+        "net_pnl": -308.6514673829978,
+        "net_return_bps": -3086.514673829978,
+        "win_rate": 0.09142857142857143,
+        "profit_factor": 0.13400302163230807,
+        "max_drawdown": 316.96995764058977,
+        "sharpe": -10.773570410028615,
+        "sortino": -21.026565020683968,
+        "turnover": 350000.0,
+        "fee_burden_bps": 3500.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H2_S3_plus_direction_edge_p25",
+      "round_trip_cost_bps": 5.0,
+      "full_sample": {
+        "trades": 1339,
+        "net_pnl": -599.2707376911172,
+        "net_return_bps": -5992.707376911172,
+        "win_rate": 0.3427931292008962,
+        "profit_factor": 0.5535673602153725,
+        "max_drawdown": 601.1408504825904,
+        "sharpe": -6.877572971705095,
+        "sortino": -10.559448552631345,
+        "turnover": 2678000.0,
+        "fee_burden_bps": 6695.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 321,
+        "net_pnl": -123.48549282129554,
+        "net_return_bps": -1234.8549282129552,
+        "win_rate": 0.3426791277258567,
+        "profit_factor": 0.505108860800898,
+        "max_drawdown": 125.35560561276833,
+        "sharpe": -3.5861467660233446,
+        "sortino": -4.66153020985889,
+        "turnover": 642000.0,
+        "fee_burden_bps": 1605.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H2_S3_plus_direction_edge_p25",
+      "round_trip_cost_bps": 10.0,
+      "full_sample": {
+        "trades": 1339,
+        "net_pnl": -1268.7707376911171,
+        "net_return_bps": -12687.70737691117,
+        "win_rate": 0.2292755787901419,
+        "profit_factor": 0.3048313179346005,
+        "max_drawdown": 1269.6408504825886,
+        "sharpe": -14.561137035415276,
+        "sortino": -22.215661976690935,
+        "turnover": 2678000.0,
+        "fee_burden_bps": 13390.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 321,
+        "net_pnl": -283.9854928212955,
+        "net_return_bps": -2839.8549282129557,
+        "win_rate": 0.20249221183800623,
+        "profit_factor": 0.2278602442796792,
+        "max_drawdown": 284.8556056127682,
+        "sharpe": -8.247233204571263,
+        "sortino": -10.968795679416102,
+        "turnover": 642000.0,
+        "fee_burden_bps": 3210.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H2_S3_plus_direction_edge_p25",
+      "round_trip_cost_bps": 15.0,
+      "full_sample": {
+        "trades": 1339,
+        "net_pnl": -1938.2707376911171,
+        "net_return_bps": -19382.707376911174,
+        "win_rate": 0.16654219566840925,
+        "profit_factor": 0.17966673289802365,
+        "max_drawdown": 1938.2707376911144,
+        "sharpe": -22.244701099125468,
+        "sortino": -33.26488044305693,
+        "turnover": 2678000.0,
+        "fee_burden_bps": 20085.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 321,
+        "net_pnl": -444.48549282129557,
+        "net_return_bps": -4444.854928212955,
+        "win_rate": 0.1308411214953271,
+        "profit_factor": 0.11576526206284965,
+        "max_drawdown": 444.4854928212956,
+        "sharpe": -12.908319643119178,
+        "sortino": -17.035870393676525,
+        "turnover": 642000.0,
+        "fee_burden_bps": 4815.0,
+        "average_holding_minutes": 15.0
+      }
+    },
+    {
+      "hypothesis": "H2_S3_plus_direction_edge_p25",
+      "round_trip_cost_bps": 20.0,
+      "full_sample": {
+        "trades": 1339,
+        "net_pnl": -2607.7707376911176,
+        "net_return_bps": -26077.707376911174,
+        "win_rate": 0.12098581030619865,
+        "profit_factor": 0.11228134379411883,
+        "max_drawdown": 2607.7707376911158,
+        "sharpe": -29.92826516283565,
+        "sortino": -43.575087703784526,
+        "turnover": 2678000.0,
+        "fee_burden_bps": 26780.0,
+        "average_holding_minutes": 15.0
+      },
+      "validation": {
+        "trades": 321,
+        "net_pnl": -604.9854928212956,
+        "net_return_bps": -6049.854928212955,
+        "win_rate": 0.08722741433021806,
+        "profit_factor": 0.06381152787483646,
+        "max_drawdown": 604.9854928212961,
+        "sharpe": -17.569406081667097,
+        "sortino": -22.739986040267897,
+        "turnover": 642000.0,
+        "fee_burden_bps": 6420.0,
+        "average_holding_minutes": 15.0
+      }
+    }
+  ]
+}

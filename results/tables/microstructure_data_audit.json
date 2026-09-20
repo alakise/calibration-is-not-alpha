@@ -1,0 +1,58 @@
+{
+  "raw": {
+    "cutoff": "2026-09-20T10:52:21+00:00",
+    "files": [
+      "outputs/overnight_research/microstructure/raw/2026-09-19/PF_ETHUSD.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-19/PF_XBTUSD.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-19/unknown.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-20/PF_ETHUSD.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-20/PF_XBTUSD.jsonl",
+      "outputs/overnight_research/microstructure/raw/2026-09-20/unknown.jsonl"
+    ],
+    "raw_lines": 26398119,
+    "bad_json": 0,
+    "symbols": {
+      "PF_ETHUSD": 9774195,
+      "PF_XBTUSD": 16623917,
+      "unknown": 7
+    },
+    "feed_counts": {
+      "book": 26301831,
+      "book_snapshot": 12,
+      "trade": 96257,
+      "trade_snapshot": 12,
+      "info": 7
+    },
+    "trade_side_counts": {
+      "None": 12,
+      "buy": 43463,
+      "sell": 53982
+    },
+    "first_event": "2026-09-19T23:36:50+00:00",
+    "last_event": "2026-09-20T10:52:21+00:00",
+    "reconnect_events": 4,
+    "side_semantics": "Kraken trade side is preserved as taker-side metadata; no aggressor side is inferred locally."
+  },
+  "derived": {
+    "cutoff": "2026-09-20T10:52:21+00:00",
+    "source": "cached canonical state files from the same bounded snapshot",
+    "symbols": {
+      "PF_XBTUSD": 40724,
+      "PF_ETHUSD": 40347
+    },
+    "valid_book_rows": {
+      "PF_XBTUSD": 38190,
+      "PF_ETHUSD": 37679
+    },
+    "derived_counts": {
+      "book": 26301831,
+      "book_snapshot": 12,
+      "trade": 96257,
+      "trade_snapshot": 12,
+      "info": 7
+    },
+    "invalid_book_event_seconds": {},
+    "l1_l10_depth": "unavailable: collector persisted L5 depth only",
+    "ofi_semantics": "depth-change OFI proxy only; true price-level OFI is not claimed from this feed snapshot."
+  }
+}

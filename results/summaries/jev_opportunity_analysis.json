@@ -1,0 +1,703 @@
+{
+  "contract": "opportunity_v1",
+  "question_schema_version": "market-opportunity-v1",
+  "sample_count": 40320,
+  "input_tokens": 194848794,
+  "output_tokens": 6894720,
+  "native_jev_confidence": {
+    "available": false,
+    "reason": "Noul answers return native probability only; no confidence field."
+  },
+  "top_probability_margin_definition": "max and top-minus-second are computed across the seven independent Noul probabilities for diagnostic binning; they are not a normalized directional distribution.",
+  "raw_question_scores": {
+    "move_5m_15bps": {
+      "n": 40320,
+      "brier": 0.12553269097222222,
+      "log_loss": 0.4216133754883049,
+      "mean_probability": 0.223609871031746,
+      "observed_rate": 0.13901289682539683,
+      "min": 0.1,
+      "max": 0.51,
+      "reliability": {
+        "ece": 0.08472743055555554,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 7485,
+            "mean_prediction": 0.177875751503006,
+            "observed_rate": 0.09445557782231129
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 32032,
+            "mean_prediction": 0.23138705044955046,
+            "observed_rate": 0.1456356143856144
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 748,
+            "mean_prediction": 0.3334090909090909,
+            "observed_rate": 0.2767379679144385
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 52,
+            "mean_prediction": 0.4203846153846153,
+            "observed_rate": 0.46153846153846156
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 3,
+            "mean_prediction": 0.5033333333333333,
+            "observed_rate": 0.6666666666666666
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          }
+        ]
+      }
+    },
+    "move_15m_15bps": {
+      "n": 40320,
+      "brier": 0.2131386904761905,
+      "log_loss": 0.6186983129774795,
+      "mean_probability": 0.26610069444444445,
+      "observed_rate": 0.3031498015873016,
+      "min": 0.12,
+      "max": 0.55,
+      "reliability": {
+        "ece": 0.04218749999999999,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 823,
+            "mean_prediction": 0.1804131227217497,
+            "observed_rate": 0.23207776427703525
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 33660,
+            "mean_prediction": 0.25546197266785503,
+            "observed_rate": 0.3008615567439097
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 5384,
+            "mean_prediction": 0.33201894502228824,
+            "observed_rate": 0.312778603268945
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 437,
+            "mean_prediction": 0.425720823798627,
+            "observed_rate": 0.482837528604119
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 16,
+            "mean_prediction": 0.51375,
+            "observed_rate": 0.625
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          }
+        ]
+      }
+    },
+    "move_30m_15bps": {
+      "n": 40320,
+      "brier": 0.2536977976190476,
+      "log_loss": 0.7026170674103871,
+      "mean_probability": 0.3329543650793651,
+      "observed_rate": 0.4287450396825397,
+      "min": 0.15,
+      "max": 0.61,
+      "reliability": {
+        "ece": 0.09580654761904758,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 36,
+            "mean_prediction": 0.17555555555555558,
+            "observed_rate": 0.16666666666666666
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 11687,
+            "mean_prediction": 0.282719260717036,
+            "observed_rate": 0.4082313681868743
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 24598,
+            "mean_prediction": 0.34112407512805926,
+            "observed_rate": 0.42637612814049924
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 3795,
+            "mean_prediction": 0.4261343873517787,
+            "observed_rate": 0.49907773386034254
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 203,
+            "mean_prediction": 0.5197044334975369,
+            "observed_rate": 0.625615763546798
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 1,
+            "mean_prediction": 0.61,
+            "observed_rate": 1.0
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          }
+        ]
+      }
+    },
+    "long_15m_15bps": {
+      "n": 40320,
+      "brier": 0.14269803075396825,
+      "log_loss": 0.4633262826273377,
+      "mean_probability": 0.24846180555555555,
+      "observed_rate": 0.16158234126984128,
+      "min": 0.14,
+      "max": 0.33,
+      "reliability": {
+        "ece": 0.08687946428571428,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 268,
+            "mean_prediction": 0.18458955223880594,
+            "observed_rate": 0.06716417910447761
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 39958,
+            "mean_prediction": 0.24873867560938986,
+            "observed_rate": 0.16212022623754943
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 94,
+            "mean_prediction": 0.31287234042553186,
+            "observed_rate": 0.20212765957446807
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          }
+        ]
+      }
+    },
+    "short_15m_15bps": {
+      "n": 40320,
+      "brier": 0.14208336309523809,
+      "log_loss": 0.46516398607969833,
+      "mean_probability": 0.2874032738095238,
+      "observed_rate": 0.14156746031746031,
+      "min": 0.17,
+      "max": 0.4,
+      "reliability": {
+        "ece": 0.14583581349206348,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 19,
+            "mean_prediction": 0.18473684210526317,
+            "observed_rate": 0.0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 31172,
+            "mean_prediction": 0.27819998716797123,
+            "observed_rate": 0.13377389965353523
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 9127,
+            "mean_prediction": 0.3190248712610934,
+            "observed_rate": 0.16851101128519777
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 2,
+            "mean_prediction": 0.4,
+            "observed_rate": 0.0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          }
+        ]
+      }
+    },
+    "long_30m_15bps": {
+      "n": 40320,
+      "brier": 0.17654401785714283,
+      "log_loss": 0.5385853152819536,
+      "mean_probability": 0.2606999007936508,
+      "observed_rate": 0.22614087301587302,
+      "min": 0.15,
+      "max": 0.34,
+      "reliability": {
+        "ece": 0.03455902777777774,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 46,
+            "mean_prediction": 0.18478260869565216,
+            "observed_rate": 0.10869565217391304
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 39888,
+            "mean_prediction": 0.2602835439229843,
+            "observed_rate": 0.2257571199358203
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 386,
+            "mean_prediction": 0.3127720207253886,
+            "observed_rate": 0.27979274611398963
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          }
+        ]
+      }
+    },
+    "short_30m_15bps": {
+      "n": 40320,
+      "brier": 0.16945212549603175,
+      "log_loss": 0.5242389122154628,
+      "mean_probability": 0.2955716765873016,
+      "observed_rate": 0.20260416666666667,
+      "min": 0.19,
+      "max": 0.4,
+      "reliability": {
+        "ece": 0.09296750992063492,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 2,
+            "mean_prediction": 0.19,
+            "observed_rate": 0.0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "n": 26899,
+            "mean_prediction": 0.28318896613257,
+            "observed_rate": 0.1910479943492323
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 13417,
+            "mean_prediction": 0.32039725721100093,
+            "observed_rate": 0.2258328985615264
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 2,
+            "mean_prediction": 0.4,
+            "observed_rate": 0.0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "mean_prediction": null,
+            "observed_rate": null
+          }
+        ]
+      }
+    }
+  },
+  "directional": {
+    "15": {
+      "n": 40320,
+      "direction_hit_rate_15bps": 0.14206349206349206,
+      "mean_gross_directional_return_bps": -0.4149973514500936,
+      "median_gross_directional_return_bps": -0.15545571858899265,
+      "mean_net_directional_return_bps": -15.414997351450095,
+      "cost_semantics": "15 bps round-trip"
+    },
+    "30": {
+      "n": 40320,
+      "direction_hit_rate_15bps": 0.20302579365079365,
+      "mean_gross_directional_return_bps": -0.762617314831623,
+      "median_gross_directional_return_bps": -0.6326151092811427,
+      "mean_net_directional_return_bps": -15.762617314831623,
+      "cost_semantics": "15 bps round-trip"
+    }
+  },
+  "probability_margin_bins": {
+    "top_probability": {
+      "0.30-0.40": {
+        "n": 30937,
+        "mean_probability": 0.29001583863981645,
+        "mean_gross_directional_return_bps": -0.34977792658946466,
+        "mean_net_directional_return_bps": -15.349777926589464
+      },
+      "0.40-0.50": {
+        "n": 3803,
+        "mean_probability": 0.3071049171706547,
+        "mean_gross_directional_return_bps": -0.16544890463068387,
+        "mean_net_directional_return_bps": -15.165448904630683
+      },
+      "0.20-0.30": {
+        "n": 5375,
+        "mean_probability": 0.26542139534883724,
+        "mean_gross_directional_return_bps": -0.9016526491712018,
+        "mean_net_directional_return_bps": -15.9016526491712
+      },
+      "0.50-0.60": {
+        "n": 200,
+        "mean_probability": 0.33015,
+        "mean_gross_directional_return_bps": -1.353794222217669,
+        "mean_net_directional_return_bps": -16.35379422221767
+      },
+      "0.00-0.20": {
+        "n": 1,
+        "mean_probability": 0.17,
+        "mean_gross_directional_return_bps": 12.857755131197024,
+        "mean_net_directional_return_bps": -2.142244868802976
+      },
+      "0.60+": {
+        "n": 4,
+        "mean_probability": 0.3525,
+        "mean_gross_directional_return_bps": -44.531808162866504,
+        "mean_net_directional_return_bps": -59.531808162866504
+      }
+    },
+    "top_second_margin": {
+      "0.00-0.20": {
+        "n": 40319,
+        "mean_probability": 0.28855155137776234,
+        "mean_gross_directional_return_bps": -0.4142591083966768,
+        "mean_net_directional_return_bps": -15.414259108396676
+      },
+      "0.20-0.30": {
+        "n": 1,
+        "mean_probability": 0.28,
+        "mean_gross_directional_return_bps": -30.18021902216006,
+        "mean_net_directional_return_bps": -45.18021902216006
+      }
+    }
+  },
+  "incremental_value": {
+    "available": true,
+    "target": "move_15m_15bps",
+    "selection_fraction": 0.7,
+    "selection_n": 28224,
+    "validation_n": 12096,
+    "baseline_features": [
+      "rv5",
+      "rv15",
+      "rv60",
+      "atr14_pct",
+      "range_pct"
+    ],
+    "baseline_validation": {
+      "n": 12096,
+      "brier": 0.1662127032640164,
+      "log_loss": 0.511811068763083,
+      "observed_rate": 0.24479166666666666
+    },
+    "baseline_plus_jev_validation": {
+      "n": 12096,
+      "brier": 0.16619864560090328,
+      "log_loss": 0.511776350258877,
+      "observed_rate": 0.24479166666666666
+    },
+    "incremental_brier_improvement": 1.4057663113131724e-05,
+    "incremental_log_loss_improvement": 3.471850420599942e-05
+  },
+  "cost_semantics": "15 bps round-trip = two fee/slippage sides plus both half-spread sides in the configured model."
+}

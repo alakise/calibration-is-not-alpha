@@ -1,0 +1,1621 @@
+{
+  "generated_at": "2026-09-20T00:18:25.246949+00:00",
+  "safety": {
+    "real_exchange_orders": false,
+    "baseline_db_sha256": "26eea722706f8aa12d0e5c15f510ec77d991903097cbd1b7481d3e4342397a38",
+    "baseline_db_sha256_expected": "26eea722706f8aa12d0e5c15f510ec77d991903097cbd1b7481d3e4342397a38",
+    "baseline_db_unchanged": true
+  },
+  "jev_holdout": {
+    "contract": "opportunity_v1",
+    "schema": "market-opportunity-v1",
+    "ready_records": 40320,
+    "pending_records": 0,
+    "failed_records": 0,
+    "input_tokens": 194848794,
+    "output_tokens": 6894720,
+    "estimated_input_cost_usd": 8.183649348000001,
+    "first_ready_timestamp": "2026-08-15 00:00:00.000000",
+    "last_ready_timestamp": "2026-09-11 23:59:00.000000",
+    "target_timestamps": 40320
+  },
+  "jev_analysis": {
+    "contract": "opportunity_v1",
+    "question_schema_version": "market-opportunity-v1",
+    "sample_count": 40320,
+    "input_tokens": 194848794,
+    "output_tokens": 6894720,
+    "native_jev_confidence": {
+      "available": false,
+      "reason": "Noul answers return native probability only; no confidence field."
+    },
+    "top_probability_margin_definition": "max and top-minus-second are computed across the seven independent Noul probabilities for diagnostic binning; they are not a normalized directional distribution.",
+    "raw_question_scores": {
+      "move_5m_15bps": {
+        "n": 40320,
+        "brier": 0.12553269097222222,
+        "log_loss": 0.4216133754883049,
+        "mean_probability": 0.223609871031746,
+        "observed_rate": 0.13901289682539683,
+        "min": 0.1,
+        "max": 0.51,
+        "reliability": {
+          "ece": 0.08472743055555554,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 7485,
+              "mean_prediction": 0.177875751503006,
+              "observed_rate": 0.09445557782231129
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "n": 32032,
+              "mean_prediction": 0.23138705044955046,
+              "observed_rate": 0.1456356143856144
+            },
+            {
+              "lower": 0.30000000000000004,
+              "upper": 0.4,
+              "n": 748,
+              "mean_prediction": 0.3334090909090909,
+              "observed_rate": 0.2767379679144385
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 52,
+              "mean_prediction": 0.4203846153846153,
+              "observed_rate": 0.46153846153846156
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6000000000000001,
+              "n": 3,
+              "mean_prediction": 0.5033333333333333,
+              "observed_rate": 0.6666666666666666
+            },
+            {
+              "lower": 0.6000000000000001,
+              "upper": 0.7000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.7000000000000001,
+              "upper": 0.8,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            }
+          ]
+        }
+      },
+      "move_15m_15bps": {
+        "n": 40320,
+        "brier": 0.2131386904761905,
+        "log_loss": 0.6186983129774795,
+        "mean_probability": 0.26610069444444445,
+        "observed_rate": 0.3031498015873016,
+        "min": 0.12,
+        "max": 0.55,
+        "reliability": {
+          "ece": 0.04218749999999999,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 823,
+              "mean_prediction": 0.1804131227217497,
+              "observed_rate": 0.23207776427703525
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "n": 33660,
+              "mean_prediction": 0.25546197266785503,
+              "observed_rate": 0.3008615567439097
+            },
+            {
+              "lower": 0.30000000000000004,
+              "upper": 0.4,
+              "n": 5384,
+              "mean_prediction": 0.33201894502228824,
+              "observed_rate": 0.312778603268945
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 437,
+              "mean_prediction": 0.425720823798627,
+              "observed_rate": 0.482837528604119
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6000000000000001,
+              "n": 16,
+              "mean_prediction": 0.51375,
+              "observed_rate": 0.625
+            },
+            {
+              "lower": 0.6000000000000001,
+              "upper": 0.7000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.7000000000000001,
+              "upper": 0.8,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            }
+          ]
+        }
+      },
+      "move_30m_15bps": {
+        "n": 40320,
+        "brier": 0.2536977976190476,
+        "log_loss": 0.7026170674103871,
+        "mean_probability": 0.3329543650793651,
+        "observed_rate": 0.4287450396825397,
+        "min": 0.15,
+        "max": 0.61,
+        "reliability": {
+          "ece": 0.09580654761904758,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 36,
+              "mean_prediction": 0.17555555555555558,
+              "observed_rate": 0.16666666666666666
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "n": 11687,
+              "mean_prediction": 0.282719260717036,
+              "observed_rate": 0.4082313681868743
+            },
+            {
+              "lower": 0.30000000000000004,
+              "upper": 0.4,
+              "n": 24598,
+              "mean_prediction": 0.34112407512805926,
+              "observed_rate": 0.42637612814049924
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 3795,
+              "mean_prediction": 0.4261343873517787,
+              "observed_rate": 0.49907773386034254
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6000000000000001,
+              "n": 203,
+              "mean_prediction": 0.5197044334975369,
+              "observed_rate": 0.625615763546798
+            },
+            {
+              "lower": 0.6000000000000001,
+              "upper": 0.7000000000000001,
+              "n": 1,
+              "mean_prediction": 0.61,
+              "observed_rate": 1.0
+            },
+            {
+              "lower": 0.7000000000000001,
+              "upper": 0.8,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            }
+          ]
+        }
+      },
+      "long_15m_15bps": {
+        "n": 40320,
+        "brier": 0.14269803075396825,
+        "log_loss": 0.4633262826273377,
+        "mean_probability": 0.24846180555555555,
+        "observed_rate": 0.16158234126984128,
+        "min": 0.14,
+        "max": 0.33,
+        "reliability": {
+          "ece": 0.08687946428571428,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 268,
+              "mean_prediction": 0.18458955223880594,
+              "observed_rate": 0.06716417910447761
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "n": 39958,
+              "mean_prediction": 0.24873867560938986,
+              "observed_rate": 0.16212022623754943
+            },
+            {
+              "lower": 0.30000000000000004,
+              "upper": 0.4,
+              "n": 94,
+              "mean_prediction": 0.31287234042553186,
+              "observed_rate": 0.20212765957446807
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.6000000000000001,
+              "upper": 0.7000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.7000000000000001,
+              "upper": 0.8,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            }
+          ]
+        }
+      },
+      "short_15m_15bps": {
+        "n": 40320,
+        "brier": 0.14208336309523809,
+        "log_loss": 0.46516398607969833,
+        "mean_probability": 0.2874032738095238,
+        "observed_rate": 0.14156746031746031,
+        "min": 0.17,
+        "max": 0.4,
+        "reliability": {
+          "ece": 0.14583581349206348,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 19,
+              "mean_prediction": 0.18473684210526317,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "n": 31172,
+              "mean_prediction": 0.27819998716797123,
+              "observed_rate": 0.13377389965353523
+            },
+            {
+              "lower": 0.30000000000000004,
+              "upper": 0.4,
+              "n": 9127,
+              "mean_prediction": 0.3190248712610934,
+              "observed_rate": 0.16851101128519777
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 2,
+              "mean_prediction": 0.4,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.6000000000000001,
+              "upper": 0.7000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.7000000000000001,
+              "upper": 0.8,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            }
+          ]
+        }
+      },
+      "long_30m_15bps": {
+        "n": 40320,
+        "brier": 0.17654401785714283,
+        "log_loss": 0.5385853152819536,
+        "mean_probability": 0.2606999007936508,
+        "observed_rate": 0.22614087301587302,
+        "min": 0.15,
+        "max": 0.34,
+        "reliability": {
+          "ece": 0.03455902777777774,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 46,
+              "mean_prediction": 0.18478260869565216,
+              "observed_rate": 0.10869565217391304
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "n": 39888,
+              "mean_prediction": 0.2602835439229843,
+              "observed_rate": 0.2257571199358203
+            },
+            {
+              "lower": 0.30000000000000004,
+              "upper": 0.4,
+              "n": 386,
+              "mean_prediction": 0.3127720207253886,
+              "observed_rate": 0.27979274611398963
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.6000000000000001,
+              "upper": 0.7000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.7000000000000001,
+              "upper": 0.8,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            }
+          ]
+        }
+      },
+      "short_30m_15bps": {
+        "n": 40320,
+        "brier": 0.16945212549603175,
+        "log_loss": 0.5242389122154628,
+        "mean_probability": 0.2955716765873016,
+        "observed_rate": 0.20260416666666667,
+        "min": 0.19,
+        "max": 0.4,
+        "reliability": {
+          "ece": 0.09296750992063492,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "mean_prediction": 0.19,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "n": 26899,
+              "mean_prediction": 0.28318896613257,
+              "observed_rate": 0.1910479943492323
+            },
+            {
+              "lower": 0.30000000000000004,
+              "upper": 0.4,
+              "n": 13417,
+              "mean_prediction": 0.32039725721100093,
+              "observed_rate": 0.2258328985615264
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 2,
+              "mean_prediction": 0.4,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.6000000000000001,
+              "upper": 0.7000000000000001,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.7000000000000001,
+              "upper": 0.8,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 0,
+              "mean_prediction": null,
+              "observed_rate": null
+            }
+          ]
+        }
+      }
+    },
+    "directional": {
+      "15": {
+        "n": 40320,
+        "direction_hit_rate_15bps": 0.14206349206349206,
+        "mean_gross_directional_return_bps": -0.4149973514500936,
+        "median_gross_directional_return_bps": -0.15545571858899265,
+        "mean_net_directional_return_bps": -15.414997351450095,
+        "cost_semantics": "15 bps round-trip"
+      },
+      "30": {
+        "n": 40320,
+        "direction_hit_rate_15bps": 0.20302579365079365,
+        "mean_gross_directional_return_bps": -0.762617314831623,
+        "median_gross_directional_return_bps": -0.6326151092811427,
+        "mean_net_directional_return_bps": -15.762617314831623,
+        "cost_semantics": "15 bps round-trip"
+      }
+    },
+    "probability_margin_bins": {
+      "top_probability": {
+        "0.30-0.40": {
+          "n": 30937,
+          "mean_probability": 0.29001583863981645,
+          "mean_gross_directional_return_bps": -0.34977792658946466,
+          "mean_net_directional_return_bps": -15.349777926589464
+        },
+        "0.40-0.50": {
+          "n": 3803,
+          "mean_probability": 0.3071049171706547,
+          "mean_gross_directional_return_bps": -0.16544890463068387,
+          "mean_net_directional_return_bps": -15.165448904630683
+        },
+        "0.20-0.30": {
+          "n": 5375,
+          "mean_probability": 0.26542139534883724,
+          "mean_gross_directional_return_bps": -0.9016526491712018,
+          "mean_net_directional_return_bps": -15.9016526491712
+        },
+        "0.50-0.60": {
+          "n": 200,
+          "mean_probability": 0.33015,
+          "mean_gross_directional_return_bps": -1.353794222217669,
+          "mean_net_directional_return_bps": -16.35379422221767
+        },
+        "0.00-0.20": {
+          "n": 1,
+          "mean_probability": 0.17,
+          "mean_gross_directional_return_bps": 12.857755131197024,
+          "mean_net_directional_return_bps": -2.142244868802976
+        },
+        "0.60+": {
+          "n": 4,
+          "mean_probability": 0.3525,
+          "mean_gross_directional_return_bps": -44.531808162866504,
+          "mean_net_directional_return_bps": -59.531808162866504
+        }
+      },
+      "top_second_margin": {
+        "0.00-0.20": {
+          "n": 40319,
+          "mean_probability": 0.28855155137776234,
+          "mean_gross_directional_return_bps": -0.4142591083966768,
+          "mean_net_directional_return_bps": -15.414259108396676
+        },
+        "0.20-0.30": {
+          "n": 1,
+          "mean_probability": 0.28,
+          "mean_gross_directional_return_bps": -30.18021902216006,
+          "mean_net_directional_return_bps": -45.18021902216006
+        }
+      }
+    },
+    "incremental_value": {
+      "available": true,
+      "target": "move_15m_15bps",
+      "selection_fraction": 0.7,
+      "selection_n": 28224,
+      "validation_n": 12096,
+      "baseline_features": [
+        "rv5",
+        "rv15",
+        "rv60",
+        "atr14_pct",
+        "range_pct"
+      ],
+      "baseline_validation": {
+        "n": 12096,
+        "brier": 0.1662127032640164,
+        "log_loss": 0.511811068763083,
+        "observed_rate": 0.24479166666666666
+      },
+      "baseline_plus_jev_validation": {
+        "n": 12096,
+        "brier": 0.16619864560090328,
+        "log_loss": 0.511776350258877,
+        "observed_rate": 0.24479166666666666
+      },
+      "incremental_brier_improvement": 1.4057663113131724e-05,
+      "incremental_log_loss_improvement": 3.471850420599942e-05
+    },
+    "cost_semantics": "15 bps round-trip = two fee/slippage sides plus both half-spread sides in the configured model."
+  },
+  "classical_quant": {
+    "symbol": "PF_XBTUSD",
+    "dataset_start": "2026-07-22T00:01:00+00:00",
+    "dataset_end": "2026-09-19T23:17:00+00:00",
+    "assumptions": {
+      "notional_usd": 1000.0,
+      "entry": "next completed 1m close after signal",
+      "max_hold_minutes": 15,
+      "costs": "round-trip, fee+spread+slippage represented by supplied bps grid",
+      "lookahead": "rolling features and shifted breakouts; validation starts flat"
+    },
+    "strategies": [
+      {
+        "strategy": "S0",
+        "round_trip_cost_bps": 5.0,
+        "trades": 3956,
+        "net_pnl": -1920.1661692505863,
+        "net_return_bps": -19201.661692505862,
+        "win_rate": 0.3104145601617796,
+        "profit_factor": 0.45678528241236155,
+        "max_drawdown": 1922.2381736008165,
+        "sharpe": -16.16059924825064,
+        "sortino": -24.404509560218553,
+        "turnover": 7912000.0,
+        "fee_burden_bps": 19780.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S0",
+        "round_trip_cost_bps": 10.0,
+        "trades": 3956,
+        "net_pnl": -3898.1661692505863,
+        "net_return_bps": -38981.66169250586,
+        "win_rate": 0.19236602628918098,
+        "profit_factor": 0.22564701680634927,
+        "max_drawdown": 3898.500232907149,
+        "sharpe": -32.80794249642146,
+        "sortino": -48.66267619688005,
+        "turnover": 7912000.0,
+        "fee_burden_bps": 39560.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S0",
+        "round_trip_cost_bps": 15.0,
+        "trades": 3956,
+        "net_pnl": -5876.166169250586,
+        "net_return_bps": -58761.66169250586,
+        "win_rate": 0.12967644084934277,
+        "profit_factor": 0.12322187980374831,
+        "max_drawdown": 5876.166169250562,
+        "sharpe": -49.455285744592274,
+        "sortino": -71.20924000900156,
+        "turnover": 7912000.0,
+        "fee_burden_bps": 59340.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S0",
+        "round_trip_cost_bps": 20.0,
+        "trades": 3956,
+        "net_pnl": -7854.166169250586,
+        "net_return_bps": -78541.66169250586,
+        "win_rate": 0.089737108190091,
+        "profit_factor": 0.07239839149418709,
+        "max_drawdown": 7854.166169250562,
+        "sharpe": -66.1026289927631,
+        "sortino": -91.95177076698342,
+        "turnover": 7912000.0,
+        "fee_burden_bps": 79120.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S1",
+        "round_trip_cost_bps": 5.0,
+        "trades": 1,
+        "net_pnl": 10.858184764991952,
+        "net_return_bps": 108.58184764991952,
+        "win_rate": 1.0,
+        "profit_factor": null,
+        "max_drawdown": 0.0,
+        "sharpe": null,
+        "sortino": null,
+        "turnover": 2000.0,
+        "fee_burden_bps": 5.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S1",
+        "round_trip_cost_bps": 10.0,
+        "trades": 1,
+        "net_pnl": 10.358184764991952,
+        "net_return_bps": 103.58184764991952,
+        "win_rate": 1.0,
+        "profit_factor": null,
+        "max_drawdown": 0.0,
+        "sharpe": null,
+        "sortino": null,
+        "turnover": 2000.0,
+        "fee_burden_bps": 10.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S1",
+        "round_trip_cost_bps": 15.0,
+        "trades": 1,
+        "net_pnl": 9.858184764991952,
+        "net_return_bps": 98.58184764991952,
+        "win_rate": 1.0,
+        "profit_factor": null,
+        "max_drawdown": 0.0,
+        "sharpe": null,
+        "sortino": null,
+        "turnover": 2000.0,
+        "fee_burden_bps": 15.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S1",
+        "round_trip_cost_bps": 20.0,
+        "trades": 1,
+        "net_pnl": 9.358184764991952,
+        "net_return_bps": 93.58184764991952,
+        "win_rate": 1.0,
+        "profit_factor": null,
+        "max_drawdown": 0.0,
+        "sharpe": null,
+        "sortino": null,
+        "turnover": 2000.0,
+        "fee_burden_bps": 20.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S2",
+        "round_trip_cost_bps": 5.0,
+        "trades": 2951,
+        "net_pnl": -1433.3571284084535,
+        "net_return_bps": -14333.571284084534,
+        "win_rate": 0.3114198576753643,
+        "profit_factor": 0.4637852971927286,
+        "max_drawdown": 1436.821045395041,
+        "sharpe": -13.641679551349933,
+        "sortino": -19.61660476138272,
+        "turnover": 5902000.0,
+        "fee_burden_bps": 14755.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S2",
+        "round_trip_cost_bps": 10.0,
+        "trades": 2951,
+        "net_pnl": -2908.8571284084537,
+        "net_return_bps": -29088.571284084537,
+        "win_rate": 0.19552694002033208,
+        "profit_factor": 0.2313288695084236,
+        "max_drawdown": 2909.680574217419,
+        "sharpe": -27.684445153225123,
+        "sortino": -39.44436779506888,
+        "turnover": 5902000.0,
+        "fee_burden_bps": 29510.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S2",
+        "round_trip_cost_bps": 15.0,
+        "trades": 2951,
+        "net_pnl": -4384.357128408454,
+        "net_return_bps": -43843.57128408454,
+        "win_rate": 0.13317519484920365,
+        "profit_factor": 0.12752679415525722,
+        "max_drawdown": 4384.357128408457,
+        "sharpe": -41.72721075510031,
+        "sortino": -58.12096812063981,
+        "turnover": 5902000.0,
+        "fee_burden_bps": 44265.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S2",
+        "round_trip_cost_bps": 20.0,
+        "trades": 2951,
+        "net_pnl": -5859.857128408454,
+        "net_return_bps": -58598.57128408454,
+        "win_rate": 0.0942053541172484,
+        "profit_factor": 0.0752143723450725,
+        "max_drawdown": 5859.857128408463,
+        "sharpe": -55.76997635697549,
+        "sortino": -75.47517895483236,
+        "turnover": 5902000.0,
+        "fee_burden_bps": 59020.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S3",
+        "round_trip_cost_bps": 5.0,
+        "trades": 2881,
+        "net_pnl": -1459.8618931938834,
+        "net_return_bps": -14598.618931938834,
+        "win_rate": 0.3089205137105172,
+        "profit_factor": 0.4622146086329067,
+        "max_drawdown": 1461.4488403844728,
+        "sharpe": -13.250634936046932,
+        "sortino": -20.606141925998855,
+        "turnover": 5762000.0,
+        "fee_burden_bps": 14405.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S3",
+        "round_trip_cost_bps": 10.0,
+        "trades": 2881,
+        "net_pnl": -2900.361893193883,
+        "net_return_bps": -29003.618931938836,
+        "win_rate": 0.19680666435265534,
+        "profit_factor": 0.23690035595584463,
+        "max_drawdown": 2901.3753563505106,
+        "sharpe": -26.325529016346483,
+        "sortino": -40.24642806797153,
+        "turnover": 5762000.0,
+        "fee_burden_bps": 28810.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S3",
+        "round_trip_cost_bps": 15.0,
+        "trades": 2881,
+        "net_pnl": -4340.861893193884,
+        "net_return_bps": -43408.618931938836,
+        "win_rate": 0.13536966331135022,
+        "profit_factor": 0.13273123844369136,
+        "max_drawdown": 4341.375356350506,
+        "sharpe": -39.40042309664604,
+        "sortino": -58.54974146056037,
+        "turnover": 5762000.0,
+        "fee_burden_bps": 43215.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S3",
+        "round_trip_cost_bps": 20.0,
+        "trades": 2881,
+        "net_pnl": -5781.361893193884,
+        "net_return_bps": -57813.61893193883,
+        "win_rate": 0.09441166261714683,
+        "profit_factor": 0.08012737970612949,
+        "max_drawdown": 5781.375356350514,
+        "sharpe": -52.47531717694558,
+        "sortino": -75.4988135221964,
+        "turnover": 5762000.0,
+        "fee_burden_bps": 57620.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S4",
+        "round_trip_cost_bps": 5.0,
+        "trades": 3850,
+        "net_pnl": -1873.2314883998035,
+        "net_return_bps": -18732.314883998035,
+        "win_rate": 0.3106493506493507,
+        "profit_factor": 0.4622825987656803,
+        "max_drawdown": 1875.3034927500335,
+        "sharpe": -15.710909963662907,
+        "sortino": -23.73675116133872,
+        "turnover": 7700000.0,
+        "fee_burden_bps": 19250.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S4",
+        "round_trip_cost_bps": 10.0,
+        "trades": 3850,
+        "net_pnl": -3798.2314883998033,
+        "net_return_bps": -37982.314883998035,
+        "win_rate": 0.19350649350649352,
+        "profit_factor": 0.2314804927756966,
+        "max_drawdown": 3798.5655520563696,
+        "sharpe": -31.85600568052299,
+        "sortino": -47.33184547581582,
+        "turnover": 7700000.0,
+        "fee_burden_bps": 38500.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S4",
+        "round_trip_cost_bps": 15.0,
+        "trades": 3850,
+        "net_pnl": -5723.231488399803,
+        "net_return_bps": -57232.314883998035,
+        "win_rate": 0.13272727272727272,
+        "profit_factor": 0.12754075163991882,
+        "max_drawdown": 5723.2314883997815,
+        "sharpe": -48.00110139738307,
+        "sortino": -69.3078602189588,
+        "turnover": 7700000.0,
+        "fee_burden_bps": 57750.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "S4",
+        "round_trip_cost_bps": 20.0,
+        "trades": 3850,
+        "net_pnl": -7648.231488399803,
+        "net_return_bps": -76482.31488399804,
+        "win_rate": 0.09428571428571429,
+        "profit_factor": 0.07531752779204609,
+        "max_drawdown": 7648.231488399787,
+        "sharpe": -64.14619711424317,
+        "sortino": -89.64963002320411,
+        "turnover": 7700000.0,
+        "fee_burden_bps": 77000.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "MR0",
+        "round_trip_cost_bps": 5.0,
+        "trades": 3665,
+        "net_pnl": -1778.4442201025095,
+        "net_return_bps": -17784.4422010251,
+        "win_rate": 0.3369713506139154,
+        "profit_factor": 0.4543730267411116,
+        "max_drawdown": 1778.4442201025056,
+        "sharpe": -14.86894303128119,
+        "sortino": -17.45973623321296,
+        "turnover": 7330000.0,
+        "fee_burden_bps": 18325.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "MR0",
+        "round_trip_cost_bps": 10.0,
+        "trades": 3665,
+        "net_pnl": -3610.9442201025095,
+        "net_return_bps": -36109.44220102509,
+        "win_rate": 0.2117326057298772,
+        "profit_factor": 0.21452534070632526,
+        "max_drawdown": 3610.9442201025145,
+        "sharpe": -30.18982731701506,
+        "sortino": -36.19520944366548,
+        "turnover": 7330000.0,
+        "fee_burden_bps": 36650.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "MR0",
+        "round_trip_cost_bps": 15.0,
+        "trades": 3665,
+        "net_pnl": -5443.4442201025095,
+        "net_return_bps": -54434.4422010251,
+        "win_rate": 0.14106412005457025,
+        "profit_factor": 0.10941461690078931,
+        "max_drawdown": 5443.444220102502,
+        "sharpe": -45.51071160274894,
+        "sortino": -54.28401668440913,
+        "turnover": 7330000.0,
+        "fee_burden_bps": 54975.0,
+        "average_holding_minutes": 15.0
+      },
+      {
+        "strategy": "MR0",
+        "round_trip_cost_bps": 20.0,
+        "trades": 3665,
+        "net_pnl": -7275.9442201025095,
+        "net_return_bps": -72759.44220102509,
+        "win_rate": 0.09549795361527967,
+        "profit_factor": 0.05879937821218712,
+        "max_drawdown": 7275.944220102508,
+        "sharpe": -60.83159588848281,
+        "sortino": -71.40476833661569,
+        "turnover": 7330000.0,
+        "fee_burden_bps": 73300.0,
+        "average_holding_minutes": 15.0
+      }
+    ],
+    "walk_forward": [
+      {
+        "selection_start": "2026-08-15T00:00:00+00:00",
+        "selection_end": "2026-08-29T00:00:00+00:00",
+        "validation_end": "2026-09-05T00:00:00+00:00",
+        "selected_strategy": "S1",
+        "selected_cost_bps": 5.0,
+        "selection_metrics": {
+          "trades": 0,
+          "net_pnl": 0.0,
+          "net_return_bps": 0.0,
+          "win_rate": null,
+          "profit_factor": null,
+          "max_drawdown": 0.0,
+          "sharpe": null,
+          "sortino": null,
+          "turnover": 0.0,
+          "fee_burden_bps": 0.0,
+          "average_holding_minutes": 0.0
+        },
+        "validation_metrics": {
+          "trades": 0,
+          "net_pnl": 0.0,
+          "net_return_bps": 0.0,
+          "win_rate": null,
+          "profit_factor": null,
+          "max_drawdown": 0.0,
+          "sharpe": null,
+          "sortino": null,
+          "turnover": 0.0,
+          "fee_burden_bps": 0.0,
+          "average_holding_minutes": 0.0
+        }
+      },
+      {
+        "selection_start": "2026-08-22T00:00:00+00:00",
+        "selection_end": "2026-09-05T00:00:00+00:00",
+        "validation_end": "2026-09-12T00:00:00+00:00",
+        "selected_strategy": "S1",
+        "selected_cost_bps": 5.0,
+        "selection_metrics": {
+          "trades": 0,
+          "net_pnl": 0.0,
+          "net_return_bps": 0.0,
+          "win_rate": null,
+          "profit_factor": null,
+          "max_drawdown": 0.0,
+          "sharpe": null,
+          "sortino": null,
+          "turnover": 0.0,
+          "fee_burden_bps": 0.0,
+          "average_holding_minutes": 0.0
+        },
+        "validation_metrics": {
+          "trades": 1,
+          "net_pnl": 10.858184764991952,
+          "net_return_bps": 108.58184764991952,
+          "win_rate": 1.0,
+          "profit_factor": null,
+          "max_drawdown": 0.0,
+          "sharpe": null,
+          "sortino": null,
+          "turnover": 2000.0,
+          "fee_burden_bps": 5.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "selection_start": "2026-08-29T00:00:00+00:00",
+        "selection_end": "2026-09-12T00:00:00+00:00",
+        "validation_end": "2026-09-19T00:00:00+00:00",
+        "selected_strategy": "S1",
+        "selected_cost_bps": 5.0,
+        "selection_metrics": {
+          "trades": 1,
+          "net_pnl": 10.858184764991952,
+          "net_return_bps": 108.58184764991952,
+          "win_rate": 1.0,
+          "profit_factor": null,
+          "max_drawdown": 0.0,
+          "sharpe": null,
+          "sortino": null,
+          "turnover": 2000.0,
+          "fee_burden_bps": 5.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation_metrics": {
+          "trades": 0,
+          "net_pnl": 0.0,
+          "net_return_bps": 0.0,
+          "win_rate": null,
+          "profit_factor": null,
+          "max_drawdown": 0.0,
+          "sharpe": null,
+          "sortino": null,
+          "turnover": 0.0,
+          "fee_burden_bps": 0.0,
+          "average_holding_minutes": 0.0
+        }
+      }
+    ]
+  },
+  "classical_15bps_gross_net": {
+    "S0": {
+      "trades": 3956,
+      "gross_pnl": 57.83383074941392,
+      "net_pnl": -5876.166169250562
+    },
+    "S1": {
+      "trades": 1,
+      "gross_pnl": 11.358184764991952,
+      "net_pnl": 9.858184764991952
+    },
+    "S2": {
+      "trades": 2951,
+      "gross_pnl": 42.14287159154647,
+      "net_pnl": -4384.357128408457
+    },
+    "S3": {
+      "trades": 2881,
+      "gross_pnl": -19.36189319388348,
+      "net_pnl": -4340.861893193876
+    },
+    "S4": {
+      "trades": 3850,
+      "gross_pnl": 51.768511600196355,
+      "net_pnl": -5723.2314883997815
+    },
+    "MR0": {
+      "trades": 3665,
+      "gross_pnl": 54.05577989749032,
+      "net_pnl": -5443.444220102502
+    }
+  },
+  "hybrid_comparison": {
+    "symbol": "PF_XBTUSD",
+    "state_contract": "market-opportunity-v1",
+    "timestamps": 40320,
+    "start": "2026-08-15T00:00:00+00:00",
+    "end": "2026-09-11T23:59:00+00:00",
+    "validation_start": "2026-09-05T00:00:00+00:00",
+    "fixed_hypotheses": {
+      "H0_S3_only": "classical OHLCV S3",
+      "H1_S3_plus_move15_p30": "S3 and P(move_15m_15bps) >= 0.30",
+      "H2_S3_plus_direction_edge_p25": "S3 and higher of long/short 15m event probability >= 0.25"
+    },
+    "assumptions": {
+      "notional_usd": 1000.0,
+      "holding_minutes": 15,
+      "entry": "next completed 1m close after signal",
+      "costs": "round-trip bps grid; no cost value was selected from results",
+      "lookahead": "Jev probabilities and S3 use only the completed candle at signal time"
+    },
+    "results": [
+      {
+        "hypothesis": "H0_S3_only",
+        "round_trip_cost_bps": 5.0,
+        "full_sample": {
+          "trades": 1355,
+          "net_pnl": -615.4011764455739,
+          "net_return_bps": -6154.0117644557395,
+          "win_rate": 0.34095940959409593,
+          "profit_factor": 0.5472336823445347,
+          "max_drawdown": 617.2712892370471,
+          "sharpe": -7.04760810833947,
+          "sortino": -10.801318100168961,
+          "turnover": 2710000.0,
+          "fee_burden_bps": 6775.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 321,
+          "net_pnl": -122.24414017412015,
+          "net_return_bps": -1222.4414017412012,
+          "win_rate": 0.34890965732087226,
+          "profit_factor": 0.5085643175805858,
+          "max_drawdown": 124.11425296559293,
+          "sharpe": -3.548956017218601,
+          "sortino": -4.599132115682571,
+          "turnover": 642000.0,
+          "fee_burden_bps": 1605.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H0_S3_only",
+        "round_trip_cost_bps": 10.0,
+        "full_sample": {
+          "trades": 1355,
+          "net_pnl": -1292.901176445574,
+          "net_return_bps": -12929.01176445574,
+          "win_rate": 0.22656826568265684,
+          "profit_factor": 0.3008185281128517,
+          "max_drawdown": 1293.7712892370446,
+          "sharpe": -14.806375358311195,
+          "sortino": -22.54810171687555,
+          "turnover": 2710000.0,
+          "fee_burden_bps": 13550.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 321,
+          "net_pnl": -282.74414017412016,
+          "net_return_bps": -2827.441401741202,
+          "win_rate": 0.20249221183800623,
+          "profit_factor": 0.22863191458191431,
+          "max_drawdown": 283.6142529655928,
+          "sharpe": -8.208544934546316,
+          "sortino": -10.899081415397479,
+          "turnover": 642000.0,
+          "fee_burden_bps": 3210.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H0_S3_only",
+        "round_trip_cost_bps": 15.0,
+        "full_sample": {
+          "trades": 1355,
+          "net_pnl": -1970.401176445574,
+          "net_return_bps": -19704.01176445574,
+          "win_rate": 0.16457564575645756,
+          "profit_factor": 0.17725630452050173,
+          "max_drawdown": 1970.4011764455713,
+          "sharpe": -22.56514260828292,
+          "sortino": -33.69113880841338,
+          "turnover": 2710000.0,
+          "fee_burden_bps": 20325.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 321,
+          "net_pnl": -443.24414017412016,
+          "net_return_bps": -4432.441401741202,
+          "win_rate": 0.1308411214953271,
+          "profit_factor": 0.11605184954872871,
+          "max_drawdown": 443.2441401741202,
+          "sharpe": -12.868133851874028,
+          "sortino": -16.962497100787644,
+          "turnover": 642000.0,
+          "fee_burden_bps": 4815.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H0_S3_only",
+        "round_trip_cost_bps": 20.0,
+        "full_sample": {
+          "trades": 1355,
+          "net_pnl": -2647.9011764455745,
+          "net_return_bps": -26479.01176445574,
+          "win_rate": 0.11955719557195572,
+          "profit_factor": 0.11076814931866169,
+          "max_drawdown": 2647.9011764455736,
+          "sharpe": -30.32390985825464,
+          "sortino": -44.088722889473765,
+          "turnover": 2710000.0,
+          "fee_burden_bps": 27100.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 321,
+          "net_pnl": -603.7441401741202,
+          "net_return_bps": -6037.441401741202,
+          "win_rate": 0.08722741433021806,
+          "profit_factor": 0.06393434182546563,
+          "max_drawdown": 603.7441401741206,
+          "sharpe": -17.527722769201738,
+          "sortino": -22.665954876963514,
+          "turnover": 642000.0,
+          "fee_burden_bps": 6420.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H1_S3_plus_move15_p30",
+        "round_trip_cost_bps": 5.0,
+        "full_sample": {
+          "trades": 699,
+          "net_pnl": -265.43188535792035,
+          "net_return_bps": -2654.3188535792037,
+          "win_rate": 0.33047210300429186,
+          "profit_factor": 0.6296409257342392,
+          "max_drawdown": 295.18650974160363,
+          "sharpe": -3.949594180208229,
+          "sortino": -7.064082899416076,
+          "turnover": 1398000.0,
+          "fee_burden_bps": 3495.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 175,
+          "net_pnl": -46.15146738299778,
+          "net_return_bps": -461.5146738299778,
+          "win_rate": 0.3142857142857143,
+          "profit_factor": 0.6637673478700714,
+          "max_drawdown": 70.96995764058968,
+          "sharpe": -1.6109305670654166,
+          "sortino": -3.6545842255111345,
+          "turnover": 350000.0,
+          "fee_burden_bps": 875.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H1_S3_plus_move15_p30",
+        "round_trip_cost_bps": 10.0,
+        "full_sample": {
+          "trades": 699,
+          "net_pnl": -614.9318853579205,
+          "net_return_bps": -6149.318853579204,
+          "win_rate": 0.23319027181688126,
+          "profit_factor": 0.3666850973711886,
+          "max_drawdown": 634.2503756155128,
+          "sharpe": -9.150111684431222,
+          "sortino": -16.054339578286204,
+          "turnover": 1398000.0,
+          "fee_burden_bps": 6990.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 175,
+          "net_pnl": -133.65146738299777,
+          "net_return_bps": -1336.5146738299777,
+          "win_rate": 0.18857142857142858,
+          "profit_factor": 0.34662977367347453,
+          "max_drawdown": 152.96995764058966,
+          "sharpe": -4.665143848053149,
+          "sortino": -10.111052630006167,
+          "turnover": 350000.0,
+          "fee_burden_bps": 1750.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H1_S3_plus_move15_p30",
+        "round_trip_cost_bps": 15.0,
+        "full_sample": {
+          "trades": 699,
+          "net_pnl": -964.4318853579205,
+          "net_return_bps": -9644.318853579203,
+          "win_rate": 0.16738197424892703,
+          "profit_factor": 0.22807595480021758,
+          "max_drawdown": 978.2503756155123,
+          "sharpe": -14.350629188654215,
+          "sortino": -24.31223835467988,
+          "turnover": 1398000.0,
+          "fee_burden_bps": 10485.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 175,
+          "net_pnl": -221.1514673829978,
+          "net_return_bps": -2211.514673829978,
+          "win_rate": 0.13142857142857142,
+          "profit_factor": 0.205271230607396,
+          "max_drawdown": 234.96995764058983,
+          "sharpe": -7.719357129040884,
+          "sortino": -15.898003085307568,
+          "turnover": 350000.0,
+          "fee_burden_bps": 2625.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H1_S3_plus_move15_p30",
+        "round_trip_cost_bps": 20.0,
+        "full_sample": {
+          "trades": 699,
+          "net_pnl": -1313.9318853579202,
+          "net_return_bps": -13139.318853579203,
+          "win_rate": 0.12732474964234622,
+          "profit_factor": 0.15114324968347442,
+          "max_drawdown": 1322.2503756155108,
+          "sharpe": -19.551146692877207,
+          "sortino": -32.09986631672298,
+          "turnover": 1398000.0,
+          "fee_burden_bps": 13980.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 175,
+          "net_pnl": -308.6514673829978,
+          "net_return_bps": -3086.514673829978,
+          "win_rate": 0.09142857142857143,
+          "profit_factor": 0.13400302163230807,
+          "max_drawdown": 316.96995764058977,
+          "sharpe": -10.773570410028615,
+          "sortino": -21.026565020683968,
+          "turnover": 350000.0,
+          "fee_burden_bps": 3500.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H2_S3_plus_direction_edge_p25",
+        "round_trip_cost_bps": 5.0,
+        "full_sample": {
+          "trades": 1339,
+          "net_pnl": -599.2707376911172,
+          "net_return_bps": -5992.707376911172,
+          "win_rate": 0.3427931292008962,
+          "profit_factor": 0.5535673602153725,
+          "max_drawdown": 601.1408504825904,
+          "sharpe": -6.877572971705095,
+          "sortino": -10.559448552631345,
+          "turnover": 2678000.0,
+          "fee_burden_bps": 6695.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 321,
+          "net_pnl": -123.48549282129554,
+          "net_return_bps": -1234.8549282129552,
+          "win_rate": 0.3426791277258567,
+          "profit_factor": 0.505108860800898,
+          "max_drawdown": 125.35560561276833,
+          "sharpe": -3.5861467660233446,
+          "sortino": -4.66153020985889,
+          "turnover": 642000.0,
+          "fee_burden_bps": 1605.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H2_S3_plus_direction_edge_p25",
+        "round_trip_cost_bps": 10.0,
+        "full_sample": {
+          "trades": 1339,
+          "net_pnl": -1268.7707376911171,
+          "net_return_bps": -12687.70737691117,
+          "win_rate": 0.2292755787901419,
+          "profit_factor": 0.3048313179346005,
+          "max_drawdown": 1269.6408504825886,
+          "sharpe": -14.561137035415276,
+          "sortino": -22.215661976690935,
+          "turnover": 2678000.0,
+          "fee_burden_bps": 13390.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 321,
+          "net_pnl": -283.9854928212955,
+          "net_return_bps": -2839.8549282129557,
+          "win_rate": 0.20249221183800623,
+          "profit_factor": 0.2278602442796792,
+          "max_drawdown": 284.8556056127682,
+          "sharpe": -8.247233204571263,
+          "sortino": -10.968795679416102,
+          "turnover": 642000.0,
+          "fee_burden_bps": 3210.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H2_S3_plus_direction_edge_p25",
+        "round_trip_cost_bps": 15.0,
+        "full_sample": {
+          "trades": 1339,
+          "net_pnl": -1938.2707376911171,
+          "net_return_bps": -19382.707376911174,
+          "win_rate": 0.16654219566840925,
+          "profit_factor": 0.17966673289802365,
+          "max_drawdown": 1938.2707376911144,
+          "sharpe": -22.244701099125468,
+          "sortino": -33.26488044305693,
+          "turnover": 2678000.0,
+          "fee_burden_bps": 20085.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 321,
+          "net_pnl": -444.48549282129557,
+          "net_return_bps": -4444.854928212955,
+          "win_rate": 0.1308411214953271,
+          "profit_factor": 0.11576526206284965,
+          "max_drawdown": 444.4854928212956,
+          "sharpe": -12.908319643119178,
+          "sortino": -17.035870393676525,
+          "turnover": 642000.0,
+          "fee_burden_bps": 4815.0,
+          "average_holding_minutes": 15.0
+        }
+      },
+      {
+        "hypothesis": "H2_S3_plus_direction_edge_p25",
+        "round_trip_cost_bps": 20.0,
+        "full_sample": {
+          "trades": 1339,
+          "net_pnl": -2607.7707376911176,
+          "net_return_bps": -26077.707376911174,
+          "win_rate": 0.12098581030619865,
+          "profit_factor": 0.11228134379411883,
+          "max_drawdown": 2607.7707376911158,
+          "sharpe": -29.92826516283565,
+          "sortino": -43.575087703784526,
+          "turnover": 2678000.0,
+          "fee_burden_bps": 26780.0,
+          "average_holding_minutes": 15.0
+        },
+        "validation": {
+          "trades": 321,
+          "net_pnl": -604.9854928212956,
+          "net_return_bps": -6049.854928212955,
+          "win_rate": 0.08722741433021806,
+          "profit_factor": 0.06381152787483646,
+          "max_drawdown": 604.9854928212961,
+          "sharpe": -17.569406081667097,
+          "sortino": -22.739986040267897,
+          "turnover": 642000.0,
+          "fee_burden_bps": 6420.0,
+          "average_holding_minutes": 15.0
+        }
+      }
+    ]
+  },
+  "microstructure": {
+    "raw_jsonl_files": 5,
+    "derived_jsonl_files": 2,
+    "events_and_snapshots": 1802094,
+    "storage_bytes": 458894028,
+    "collector_status": "public-only append-only collector started"
+  }
+}
