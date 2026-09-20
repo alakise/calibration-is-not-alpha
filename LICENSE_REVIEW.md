@@ -17,5 +17,6 @@ agreement could add terms, so the account's actual order should still be
 checked before release. This is a release review, not legal advice.
 
 No API keys, credentials, private service documentation, or raw request data
-are included in this export. The remaining operational blocker is GitHub
-authentication, not an identified benchmark-publication ban.
+are included in this export. GitHub authentication is complete and the public
+repository has been created; account-specific TypeSafe terms remain the only
+release-review item.

@@ -11,7 +11,7 @@ authors:
   - family-names: "Doğan"
     given-names: "Mustafa Safa"
     # ORCID intentionally left unresolved pending author confirmation.
-# Proposed URL; the repository is not created until publication review clears.
+# Public repository URL.
 repository-code: "https://github.com/alakise/calibration-is-not-alpha"
 license: MIT
 keywords:
